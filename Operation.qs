@@ -83,7 +83,7 @@
         }
     }
 
-    operation QubitsToInt(qubits: Qubit[]): Int {
+    operation QubitsToInt(qubits: Qubit[]): Int {  // Like MeasureIntegerBE, but does not set register to 0
         body {
             mutable sum = 0;
             let lastIndex = Length(qubits) - 1;
@@ -91,6 +91,24 @@
                 set sum = sum + BinaryValue(j, qubits[lastIndex - j]);
             }
             return sum;
+        }
+    }
+    
+    operation RunOnAllBinariesOfLength(length: Int, op: (Qubit[] => ())): () {
+        body {
+            let binaries = GenerateAllBinariesOfLength(length);
+
+            using (qubits = Qubit[length]) {
+                for (i in 0..Length(binaries) - 1) {
+                    let binary = binaries[i];
+                    
+                    SetQubits(qubits, binary);
+
+                    op(qubits);
+
+                    ResetAll(qubits);
+                }
+            }
         }
     }
 
