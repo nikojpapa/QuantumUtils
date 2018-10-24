@@ -1,6 +1,7 @@
 ﻿namespace Utils
 {
     open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Extensions.Convert;
     open Microsoft.Quantum.Primitive;
 
     operation Toffoli(a: Qubit, b: Qubit, c: Qubit): () {
@@ -18,7 +19,11 @@
             CNOT(q1, target);
             CNOT(q2, target);
             Toffoli(q1, q2, target);
-        } 
+        }
+
+        adjoint auto;
+        controlled auto;
+        controlled adjoint auto;
     }
 
     function GenerateBinaries(allBinaries: Int[][], depth: Int): Int[][] {
@@ -86,6 +91,39 @@
                 set sum = sum + BinaryValue(j, qubits[lastIndex - j]);
             }
             return sum;
+        }
+    }
+
+    operation RunOnAllTwoBinariesOfLength(length: Int, op: ((Qubit[], Qubit[]) => ())): () {
+        body {
+            let binaries = GenerateAllBinariesOfLength(length);
+
+            using (qubits = Qubit[length * 2]) {
+                for (i in 0..Length(binaries) - 1) {
+                    for (j in 0..Length(binaries) - 1) {
+                        let binaryA = binaries[i];
+                        let binaryB = binaries[j];
+                        let a = qubits[0..length-1];
+                        let b = qubits[length..length * 2 - 1];
+                        
+                        SetQubits(a, binaryA);
+                        SetQubits(b, binaryB);
+
+                        op(a, b);
+
+                        ResetAll(qubits);
+                    }
+                }
+            }
+        }
+    }
+
+    operation PrintRegister(reg: Qubit[]): () {
+        body {
+            mutable str = "";
+            for (i in 0..Length(reg) - 1) {
+                set str = str + ToStringI(ResultAsInt([M(reg[i])]));
+            }
         }
     }
 }
