@@ -37,16 +37,16 @@
         }
 
         mutable newBinary = new Int[binaryLength];
-        for (i in 0..binaryLength - 1) {
-            set newBinary[i] = lastBinary[i];
+        for (base10 in 0..binaryLength - 1) {
+            set newBinary[base10] = lastBinary[base10];
         }
 
         let binariesFromZero = GenerateBinaries(allBinaries, depth + 1);
 
         set newBinary[depth] = 1;
         mutable newAllBinaries2 = new Int[][Length(binariesFromZero) + 1];
-        for (i in 0..Length(binariesFromZero) - 1) {
-            set newAllBinaries2[i] = binariesFromZero[i];
+        for (base10 in 0..Length(binariesFromZero) - 1) {
+            set newAllBinaries2[base10] = binariesFromZero[base10];
         }
         set newAllBinaries2[Length(binariesFromZero)] = newBinary;
 
@@ -61,20 +61,24 @@
         return GenerateBinaries(initialBinaries, 0);
     }
 
-    function NumIsOne(num: Int): Bool {
-        return num == 1;
-    }
-
     operation InitQubit(index: Int, binaryRep: Int[], target: Qubit): () {
         body {
-            ApplyIf(X, NumIsOne(binaryRep[index]), target);        
+            ApplyIfCA(X, binaryRep[index] == 1, target);        
         }
+
+        adjoint auto;
+        controlled auto;
+        controlled adjoint auto;
     }
 
-    operation SetQubits(register: Qubit[], binary: Int[]): () {
+    operation SetQubits(register: Qubit[], binaryStr: Int[]): () {
         body {
-            ApplyToEachIndex(InitQubit(_, binary, _), register);
+            ApplyToEachIndexCA(InitQubit(_, binaryStr, _), register);
         }
+
+        adjoint auto;
+        controlled auto;
+        controlled adjoint auto;
     }
 
     operation BinaryValue(index: Int, qubit: Qubit): Int {
@@ -93,16 +97,29 @@
             return sum;
         }
     }
+
+    function IntToBinary(base10: Int): Int[] {
+        mutable base10Mut = base10;
+        mutable binary = new Int[0];
+        repeat {
+            set binary = [base10Mut % 2] + binary;
+            set base10Mut = base10Mut / 2;
+        } until (base10Mut <= 0)
+        fixup {
+        }
+
+        return binary;
+    }
     
     operation RunOnAllBinariesOfLength(length: Int, op: (Qubit[] => ())): () {
         body {
             let binaries = GenerateAllBinariesOfLength(length);
 
             using (qubits = Qubit[length]) {
-                for (i in 0..Length(binaries) - 1) {
-                    let binary = binaries[i];
+                for (base10 in 0..Length(binaries) - 1) {
+                    let binaryStr = binaries[base10];
                     
-                    SetQubits(qubits, binary);
+                    SetQubits(qubits, binaryStr);
 
                     op(qubits);
 
@@ -117,9 +134,9 @@
             let binaries = GenerateAllBinariesOfLength(length);
 
             using (qubits = Qubit[length * 2]) {
-                for (i in 0..Length(binaries) - 1) {
+                for (base10 in 0..Length(binaries) - 1) {
                     for (j in 0..Length(binaries) - 1) {
-                        let binaryA = binaries[i];
+                        let binaryA = binaries[base10];
                         let binaryB = binaries[j];
                         let a = qubits[0..length-1];
                         let b = qubits[length..length * 2 - 1];
@@ -139,8 +156,8 @@
     operation PrintRegister(reg: Qubit[]): () {
         body {
             mutable str = "";
-            for (i in 0..Length(reg) - 1) {
-                set str = str + ToStringI(ResultAsInt([M(reg[i])]));
+            for (base10 in 0..Length(reg) - 1) {
+                set str = str + ToStringI(ResultAsInt([M(reg[base10])]));
             }
         }
     }
