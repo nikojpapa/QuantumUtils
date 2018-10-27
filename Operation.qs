@@ -61,9 +61,9 @@
         return GenerateBinaries(initialBinaries, 0);
     }
 
-    operation InitQubit(index: Int, binaryRep: Int[], target: Qubit): () {
+    operation _InitQubit(index: Int, binaryRep: Int[], target: Qubit): () {
         body {
-            ApplyIfCA(X, binaryRep[index] == 1, target);        
+            ApplyIfCA(X, index <= Length(binaryRep) - 1 && binaryRep[index] == 1, target);        
         }
 
         adjoint auto;
@@ -73,7 +73,7 @@
 
     operation SetQubits(register: Qubit[], binaryStr: Int[]): () {
         body {
-            ApplyToEachIndexCA(InitQubit(_, binaryStr, _), register);
+            ApplyToEachIndexCA(_InitQubit(_, binaryStr, _), register);
         }
 
         adjoint auto;
