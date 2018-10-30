@@ -2,7 +2,29 @@
 {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Extensions.Convert;
+    open Microsoft.Quantum.Extensions.Testing;
     open Microsoft.Quantum.Primitive;
+
+    operation CopyQubits(from: Qubit[], to: Qubit[]): () {
+        body {
+            let fromLength = Length(from);
+            let toLength = Length(to);
+            AssertBoolEqual(fromLength <= toLength, true, $"TO register (length {toLength}) must be able to contain FROM register (length {fromLength})");
+            // AssertAllZero(to);
+
+            SwapReverseRegister(from);
+            SwapReverseRegister(to);
+            for (i in 0..fromLength - 1) {
+                CNOT(from[i], to[i]);
+            }
+            SwapReverseRegister(to);
+            SwapReverseRegister(from);
+        }
+
+        adjoint auto;
+        controlled auto;
+        controlled adjoint auto;
+    }
 
     operation Toffoli(a: Qubit, b: Qubit, c: Qubit): () {
         body {

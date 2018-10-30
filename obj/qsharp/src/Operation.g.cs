@@ -4,21 +4,167 @@ using Microsoft.Quantum.Primitive;
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.MetaData.Attributes;
 
-[assembly: OperationDeclaration("Utils", "Toffoli (a : Qubit, b : Qubit, c : Qubit) : ()", new string[] { "Controlled", "Adjoint" }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 200L, 7L, 57L)]
-[assembly: OperationDeclaration("Utils", "QubitOr (q1 : Qubit, q2 : Qubit, target : Qubit) : ()", new string[] { "Controlled", "Adjoint" }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 427L, 17L, 64L)]
-[assembly: OperationDeclaration("Utils", "_InitQubit (index : Int, binaryRep : Int[], target : Qubit) : ()", new string[] { "Controlled", "Adjoint" }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 2003L, 64L, 75L)]
-[assembly: OperationDeclaration("Utils", "SetQubits (register : Qubit[], binaryStr : Int[]) : ()", new string[] { "Controlled", "Adjoint" }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 2292L, 74L, 66L)]
-[assembly: OperationDeclaration("Utils", "BinaryValue (index : Int, qubit : Qubit) : Int", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 2545L, 84L, 58L)]
-[assembly: OperationDeclaration("Utils", "QubitsToInt (qubits : Qubit[]) : Int", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 2691L, 90L, 49L)]
-[assembly: OperationDeclaration("Utils", "RunOnAllBinariesOfLength (length : Int, op : (Qubit[] => ())) : ()", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 3433L, 114L, 78L)]
-[assembly: OperationDeclaration("Utils", "RunOnAllTwoBinariesOfLength (length : Int, op : ((Qubit[], Qubit[]) => ())) : ()", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 3973L, 132L, 92L)]
-[assembly: OperationDeclaration("Utils", "PrintRegister (reg : Qubit[]) : ()", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 4781L, 156L, 47L)]
-[assembly: FunctionDeclaration("Utils", "GenerateBinaries (allBinaries : Int[][], depth : Int) : Int[][]", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 664L, 29L, 14L)]
-[assembly: FunctionDeclaration("Utils", "GenerateAllBinariesOfLength (length : Int) : Int[][]", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 1713L, 58L, 14L)]
-[assembly: FunctionDeclaration("Utils", "IntToBinary (base10 : Int) : Int[]", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 3031L, 101L, 14L)]
+[assembly: OperationDeclaration("Utils", "CopyQubits (from : Qubit[], to : Qubit[]) : ()", new string[] { "Controlled", "Adjoint" }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 249L, 8L, 58L)]
+[assembly: OperationDeclaration("Utils", "Toffoli (a : Qubit, b : Qubit, c : Qubit) : ()", new string[] { "Controlled", "Adjoint" }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 960L, 29L, 57L)]
+[assembly: OperationDeclaration("Utils", "QubitOr (q1 : Qubit, q2 : Qubit, target : Qubit) : ()", new string[] { "Controlled", "Adjoint" }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 1187L, 39L, 64L)]
+[assembly: OperationDeclaration("Utils", "_InitQubit (index : Int, binaryRep : Int[], target : Qubit) : ()", new string[] { "Controlled", "Adjoint" }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 2763L, 86L, 75L)]
+[assembly: OperationDeclaration("Utils", "SetQubits (register : Qubit[], binaryStr : Int[]) : ()", new string[] { "Controlled", "Adjoint" }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 3052L, 96L, 66L)]
+[assembly: OperationDeclaration("Utils", "BinaryValue (index : Int, qubit : Qubit) : Int", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 3305L, 106L, 58L)]
+[assembly: OperationDeclaration("Utils", "QubitsToInt (qubits : Qubit[]) : Int", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 3451L, 112L, 49L)]
+[assembly: OperationDeclaration("Utils", "RunOnAllBinariesOfLength (length : Int, op : (Qubit[] => ())) : ()", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 4193L, 136L, 78L)]
+[assembly: OperationDeclaration("Utils", "RunOnAllTwoBinariesOfLength (length : Int, op : ((Qubit[], Qubit[]) => ())) : ()", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 4733L, 154L, 92L)]
+[assembly: OperationDeclaration("Utils", "PrintRegister (reg : Qubit[]) : ()", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 5541L, 178L, 47L)]
+[assembly: FunctionDeclaration("Utils", "GenerateBinaries (allBinaries : Int[][], depth : Int) : Int[][]", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 1424L, 51L, 14L)]
+[assembly: FunctionDeclaration("Utils", "GenerateAllBinariesOfLength (length : Int) : Int[][]", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 2473L, 80L, 14L)]
+[assembly: FunctionDeclaration("Utils", "IntToBinary (base10 : Int) : Int[]", new string[] { }, "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs", 3791L, 123L, 14L)]
 #line hidden
 namespace Utils
 {
+    public class CopyQubits : Unitary<(QArray<Qubit>,QArray<Qubit>)>, ICallable
+    {
+        public CopyQubits(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(QArray<Qubit>,QArray<Qubit>)>, IApplyData
+        {
+            public In((QArray<Qubit>,QArray<Qubit>) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits => Qubit.Concat(((IApplyData)Data.Item1)?.Qubits, ((IApplyData)Data.Item2)?.Qubits);
+        }
+
+        String ICallable.Name => "CopyQubits";
+        String ICallable.FullName => "Utils.CopyQubits";
+        protected ICallable<(Boolean,Boolean,String), QVoid> MicrosoftQuantumCanonAssertBoolEqual
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<(Qubit,Qubit)> MicrosoftQuantumPrimitiveCNOT
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<QArray<Qubit>> MicrosoftQuantumCanonSwapReverseRegister
+        {
+            get;
+            set;
+        }
+
+        public override Func<(QArray<Qubit>,QArray<Qubit>), QVoid> Body => (__in) =>
+        {
+            var (from,to) = __in;
+#line 10 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            var fromLength = from.Count;
+#line 11 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            var toLength = to.Count;
+#line 12 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            MicrosoftQuantumCanonAssertBoolEqual.Apply(((fromLength <= toLength), true, $"TO register (length {toLength}) must be able to contain FROM register (length {fromLength})"));
+            // AssertAllZero(to);
+#line 15 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            MicrosoftQuantumCanonSwapReverseRegister.Apply(from);
+#line 16 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            MicrosoftQuantumCanonSwapReverseRegister.Apply(to);
+#line 17 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            foreach (var i in new Range(0L, (fromLength - 1L)))
+            {
+#line 18 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+                MicrosoftQuantumPrimitiveCNOT.Apply((from[i], to[i]));
+            }
+
+#line 20 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            MicrosoftQuantumCanonSwapReverseRegister.Apply(to);
+#line 21 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            MicrosoftQuantumCanonSwapReverseRegister.Apply(from);
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(QArray<Qubit>,QArray<Qubit>), QVoid> AdjointBody => (__in) =>
+        {
+            var (from,to) = __in;
+#line 10 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            var fromLength = from.Count;
+#line 11 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+            var toLength = to.Count;
+            MicrosoftQuantumCanonAssertBoolEqual.Apply(((fromLength <= toLength), true, $"TO register (length {toLength}) must be able to contain FROM register (length {fromLength})"));
+            // AssertAllZero(to);
+            MicrosoftQuantumCanonSwapReverseRegister.Adjoint.Apply(from);
+            MicrosoftQuantumCanonSwapReverseRegister.Adjoint.Apply(to);
+            foreach (var i in new Range((0L - ((((fromLength - 1L) - 0L) / 1L) * -(1L))), -(1L), 0L))
+            {
+                MicrosoftQuantumPrimitiveCNOT.Adjoint.Apply((from[i], to[i]));
+            }
+
+            MicrosoftQuantumCanonSwapReverseRegister.Adjoint.Apply(to);
+            MicrosoftQuantumCanonSwapReverseRegister.Adjoint.Apply(from);
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(QArray<Qubit>,(QArray<Qubit>,QArray<Qubit>)), QVoid> ControlledBody => (__in) =>
+        {
+            var (controlQubits,(from,to)) = __in;
+            var fromLength = from.Count;
+            var toLength = to.Count;
+            MicrosoftQuantumCanonAssertBoolEqual.Apply(((fromLength <= toLength), true, $"TO register (length {toLength}) must be able to contain FROM register (length {fromLength})"));
+            // AssertAllZero(to);
+            MicrosoftQuantumCanonSwapReverseRegister.Controlled.Apply((controlQubits, from));
+            MicrosoftQuantumCanonSwapReverseRegister.Controlled.Apply((controlQubits, to));
+            foreach (var i in new Range(0L, (fromLength - 1L)))
+            {
+                MicrosoftQuantumPrimitiveCNOT.Controlled.Apply((controlQubits, (from[i], to[i])));
+            }
+
+            MicrosoftQuantumCanonSwapReverseRegister.Controlled.Apply((controlQubits, to));
+            MicrosoftQuantumCanonSwapReverseRegister.Controlled.Apply((controlQubits, from));
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override Func<(QArray<Qubit>,(QArray<Qubit>,QArray<Qubit>)), QVoid> ControlledAdjointBody => (__in) =>
+        {
+            var (controlQubits,(from,to)) = __in;
+            var fromLength = from.Count;
+            var toLength = to.Count;
+            MicrosoftQuantumCanonAssertBoolEqual.Apply(((fromLength <= toLength), true, $"TO register (length {toLength}) must be able to contain FROM register (length {fromLength})"));
+            // AssertAllZero(to);
+            MicrosoftQuantumCanonSwapReverseRegister.Adjoint.Controlled.Apply((controlQubits, from));
+            MicrosoftQuantumCanonSwapReverseRegister.Adjoint.Controlled.Apply((controlQubits, to));
+            foreach (var i in new Range((0L - ((((fromLength - 1L) - 0L) / 1L) * -(1L))), -(1L), 0L))
+            {
+                MicrosoftQuantumPrimitiveCNOT.Adjoint.Controlled.Apply((controlQubits, (from[i], to[i])));
+            }
+
+            MicrosoftQuantumCanonSwapReverseRegister.Adjoint.Controlled.Apply((controlQubits, to));
+            MicrosoftQuantumCanonSwapReverseRegister.Adjoint.Controlled.Apply((controlQubits, from));
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void Init()
+        {
+            this.MicrosoftQuantumCanonAssertBoolEqual = this.Factory.Get<ICallable<(Boolean,Boolean,String), QVoid>>(typeof(Microsoft.Quantum.Canon.AssertBoolEqual));
+            this.MicrosoftQuantumPrimitiveCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Primitive.CNOT));
+            this.MicrosoftQuantumCanonSwapReverseRegister = this.Factory.Get<IUnitary<QArray<Qubit>>>(typeof(Microsoft.Quantum.Canon.SwapReverseRegister));
+        }
+
+        public override IApplyData __dataIn((QArray<Qubit>,QArray<Qubit>) data) => new In(data);
+        public override IApplyData __dataOut(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> from, QArray<Qubit> to)
+        {
+            return __m__.Run<CopyQubits, (QArray<Qubit>,QArray<Qubit>), QVoid>((from, to));
+        }
+    }
+
     public class Toffoli : Unitary<(Qubit,Qubit,Qubit)>, ICallable
     {
         public Toffoli(IOperationFactory m) : base(m)
@@ -53,7 +199,7 @@ namespace Utils
         public override Func<(Qubit,Qubit,Qubit), QVoid> Body => (__in) =>
         {
             var (a,b,c) = __in;
-#line 9 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 31 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             MicrosoftQuantumPrimitiveX.Controlled.Apply((new QArray<Qubit>(a, b), c));
 #line hidden
             return QVoid.Instance;
@@ -140,11 +286,11 @@ namespace Utils
         public override Func<(Qubit,Qubit,Qubit), QVoid> Body => (__in) =>
         {
             var (q1,q2,target) = __in;
-#line 19 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 41 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             MicrosoftQuantumPrimitiveCNOT.Apply((q1, target));
-#line 20 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 42 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             MicrosoftQuantumPrimitiveCNOT.Apply((q2, target));
-#line 21 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 43 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             Toffoli.Apply((q1, q2, target));
 #line hidden
             return QVoid.Instance;
@@ -218,48 +364,48 @@ namespace Utils
         public override Func<(QArray<QArray<Int64>>,Int64), QArray<QArray<Int64>>> Body => (__in) =>
         {
             var (allBinaries,depth) = __in;
-#line 30 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 52 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var numBinaries = allBinaries.Count;
-#line 31 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 53 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var lastBinary = allBinaries[(numBinaries - 1L)];
-#line 32 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 54 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var binaryLength = lastBinary.Count;
-#line 33 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 55 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var newBinaryPosition = numBinaries;
-#line 35 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 57 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             if ((depth > (binaryLength - 1L)))
             {
-#line 36 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 58 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 return allBinaries;
             }
 
-#line 39 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 61 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var newBinary = new QArray<Int64>(binaryLength);
-#line 40 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 62 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             foreach (var base10 in new Range(0L, (binaryLength - 1L)))
             {
-#line 41 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 63 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 newBinary[base10] = lastBinary[base10];
             }
 
-#line 44 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 66 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var binariesFromZero = ((ICallable)this).Apply<QArray<QArray<Int64>>>((allBinaries, (depth + 1L)));
-#line 46 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 68 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             newBinary[depth] = 1L;
-#line 47 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 69 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var newAllBinaries2 = new QArray<QArray<Int64>>((binariesFromZero.Count + 1L));
-#line 48 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 70 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             foreach (var base10 in new Range(0L, (binariesFromZero.Count - 1L)))
             {
-#line 49 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 71 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 newAllBinaries2[base10] = binariesFromZero[base10];
             }
 
-#line 51 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 73 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             newAllBinaries2[binariesFromZero.Count] = newBinary;
-#line 53 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 75 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var binariesFromOne = ((ICallable)this).Apply<QArray<QArray<Int64>>>((newAllBinaries2, (depth + 1L)));
-#line 55 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 77 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             return binariesFromOne;
         }
 
@@ -293,11 +439,11 @@ namespace Utils
         public override Func<Int64, QArray<QArray<Int64>>> Body => (__in) =>
         {
             var length = __in;
-#line 59 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 81 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var initialBinaries = new QArray<QArray<Int64>>(1L);
-#line 60 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 82 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             initialBinaries[0L] = new QArray<Int64>(length);
-#line 61 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 83 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             return GenerateBinaries.Apply((initialBinaries, 0L));
         }
 
@@ -353,7 +499,7 @@ namespace Utils
         public override Func<(Int64,QArray<Int64>,Qubit), QVoid> Body => (__in) =>
         {
             var (index,binaryRep,target) = __in;
-#line 66 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 88 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             MicrosoftQuantumCanonApplyIfCA.Apply((((IUnitary)MicrosoftQuantumPrimitiveX), ((index <= (binaryRep.Count - 1L)) && (binaryRep[index] == 1L)), target));
 #line hidden
             return QVoid.Instance;
@@ -433,7 +579,7 @@ namespace Utils
         public override Func<(QArray<Qubit>,QArray<Int64>), QVoid> Body => (__in) =>
         {
             var (register,binaryStr) = __in;
-#line 76 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 98 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             MicrosoftQuantumCanonApplyToEachIndexCA.Apply((((IUnitary)_InitQubit.Partial(new Func<(Int64,Qubit), (Int64,QArray<Int64>,Qubit)>((_arg1) => (_arg1.Item1, binaryStr, _arg1.Item2)))), register));
 #line hidden
             return QVoid.Instance;
@@ -519,7 +665,7 @@ namespace Utils
         public override Func<(Int64,Qubit), Int64> Body => (__in) =>
         {
             var (index,qubit) = __in;
-#line 86 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 108 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             return (2L.Pow(index) * MicrosoftQuantumCanonResultAsInt.Apply(new QArray<Result>()
             {M.Apply(qubit)}));
         }
@@ -556,18 +702,18 @@ namespace Utils
         public override Func<QArray<Qubit>, Int64> Body => (__in) =>
         {
             var qubits = __in;
-#line 92 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 114 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var sum = 0L;
-#line 93 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 115 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var lastIndex = (qubits.Count - 1L);
-#line 94 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 116 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             foreach (var j in new Range(0L, lastIndex))
             {
-#line 95 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 117 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 sum = (sum + BinaryValue.Apply((j, qubits[(lastIndex - j)])));
             }
 
-#line 97 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 119 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             return sum;
         }
 
@@ -596,17 +742,17 @@ namespace Utils
         public override Func<Int64, QArray<Int64>> Body => (__in) =>
         {
             var base10 = __in;
-#line 102 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 124 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var base10Mut = base10;
-#line 103 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 125 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var binary = new QArray<Int64>(0L);
-#line 104 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 126 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             while (true)
             {
-#line 105 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 127 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 binary = (new QArray<Int64>()
                 {(base10Mut % 2L)} + binary);
-#line 106 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 128 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 base10Mut = (base10Mut / 2L);
                 if ((base10Mut <= 0L))
                 {
@@ -617,7 +763,7 @@ namespace Utils
                 }
             }
 
-#line 111 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 133 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             return binary;
         }
 
@@ -684,20 +830,20 @@ namespace Utils
         public override Func<(Int64,ICallable), QVoid> Body => (__in) =>
         {
             var (length,op) = __in;
-#line 116 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 138 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var binaries = GenerateAllBinariesOfLength.Apply(length);
-#line 118 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 140 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var qubits = Allocate.Apply(length);
-#line 119 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 141 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             foreach (var base10 in new Range(0L, (binaries.Count - 1L)))
             {
-#line 120 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 142 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 var binaryStr = binaries[base10];
-#line 122 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 144 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 SetQubits.Apply((qubits, binaryStr));
-#line 124 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 146 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 op.Apply(qubits);
-#line 126 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 148 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 ResetAll.Apply(qubits);
             }
 
@@ -775,31 +921,31 @@ namespace Utils
         public override Func<(Int64,ICallable), QVoid> Body => (__in) =>
         {
             var (length,op) = __in;
-#line 134 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 156 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var binaries = GenerateAllBinariesOfLength.Apply(length);
-#line 136 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 158 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var qubits = Allocate.Apply((length * 2L));
-#line 137 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 159 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             foreach (var base10 in new Range(0L, (binaries.Count - 1L)))
             {
-#line 138 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 160 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 foreach (var j in new Range(0L, (binaries.Count - 1L)))
                 {
-#line 139 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 161 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                     var binaryA = binaries[base10];
-#line 140 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 162 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                     var binaryB = binaries[j];
-#line 141 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 163 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                     var a = qubits?.Slice(new Range(0L, (length - 1L)));
-#line 142 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 164 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                     var b = qubits?.Slice(new Range(length, ((length * 2L) - 1L)));
-#line 144 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 166 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                     SetQubits.Apply((a, binaryA));
-#line 145 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 167 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                     SetQubits.Apply((b, binaryB));
-#line 147 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 169 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                     op.Apply((a, b));
-#line 149 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 171 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                     ResetAll.Apply(qubits);
                 }
             }
@@ -857,12 +1003,12 @@ namespace Utils
         public override Func<QArray<Qubit>, QVoid> Body => (__in) =>
         {
             var reg = __in;
-#line 158 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 180 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             var str = "";
-#line 159 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 181 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
             foreach (var base10 in new Range(0L, (reg.Count - 1L)))
             {
-#line 160 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
+#line 182 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Operation.qs"
                 str = (str + MicrosoftQuantumExtensionsConvertToStringI.Apply(MicrosoftQuantumCanonResultAsInt.Apply(new QArray<Result>()
                 {M.Apply(reg[base10])})));
             }
