@@ -1,9 +1,10 @@
-namespace Utils {
+namespace Utils.General {
     
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Extensions.Convert;
     open Microsoft.Quantum.Extensions.Testing;
     open Microsoft.Quantum.Primitive;
+    open Utils.Compare;
     
     
     operation CopyQubits (from : Qubit[], to : Qubit[]) : Unit {
@@ -31,24 +32,12 @@ namespace Utils {
     }
     
     
-    operation Toffoli (a : Qubit, b : Qubit, c : Qubit) : Unit {
-        
-        body (...) {
-            Controlled X([a, b], c);
-        }
-        
-        adjoint invert;
-        controlled distribute;
-        controlled adjoint distribute;
-    }
-    
-    
     operation QubitOr (q1 : Qubit, q2 : Qubit, target : Qubit) : Unit {
         
         body (...) {
             CNOT(q1, target);
             CNOT(q2, target);
-            Toffoli(q1, q2, target);
+            Controlled X([q1, q2], target);
         }
         
         adjoint invert;
@@ -57,7 +46,7 @@ namespace Utils {
     }
     
     
-    function GenerateBinaries (allBinaries : Int[][], depth : Int) : Int[][] {
+    function _GenerateBinaries (allBinaries : Int[][], depth : Int) : Int[][] {
         
         let numBinaries = Length(allBinaries);
         let lastBinary = allBinaries[numBinaries - 1];
@@ -74,7 +63,7 @@ namespace Utils {
             set newBinary[base10] = lastBinary[base10];
         }
         
-        let binariesFromZero = GenerateBinaries(allBinaries, depth + 1);
+        let binariesFromZero = _GenerateBinaries(allBinaries, depth + 1);
         set newBinary[depth] = 1;
         mutable newAllBinaries2 = new Int[][Length(binariesFromZero) + 1];
         
@@ -83,7 +72,7 @@ namespace Utils {
         }
         
         set newAllBinaries2[Length(binariesFromZero)] = newBinary;
-        let binariesFromOne = GenerateBinaries(newAllBinaries2, depth + 1);
+        let binariesFromOne = _GenerateBinaries(newAllBinaries2, depth + 1);
         return binariesFromOne;
     }
     
@@ -92,7 +81,7 @@ namespace Utils {
         
         mutable initialBinaries = new Int[][1];
         set initialBinaries[0] = new Int[length];
-        return GenerateBinaries(initialBinaries, 0);
+        return _GenerateBinaries(initialBinaries, 0);
     }
     
     
