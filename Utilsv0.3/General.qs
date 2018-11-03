@@ -94,7 +94,7 @@ namespace Utils.General {
     }
     
     
-    operation PrintRegister (reg : Qubit[]) : Unit {
+    operation RegisterToString (reg : Qubit[]) : String {
         
         mutable str = "";
         
@@ -102,7 +102,7 @@ namespace Utils.General {
             set str = str + ToStringI(ResultAsInt([M(reg[i])]));
         }
 
-        Message(str);
+        return str;
     }
     
 }

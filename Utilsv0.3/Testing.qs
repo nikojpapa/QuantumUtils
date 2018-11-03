@@ -55,18 +55,27 @@ namespace Utils.Testing {
     
     
     operation RunOnAllBinariesOfLength (length : Int, op : (Qubit[] => Unit)) : Unit {
-        
-        let binaries = GenerateAllBinariesOfLength(length);
-        
+
         using (qubits = Qubit[length]) {
-            
-            for (base10 in 0 .. Length(binaries) - 1) {
-                let binaryStr = binaries[base10];
-                SetQubits(qubits, binaryStr);
+            for (base10 in 0..2 ^ length - 1) {
+                IntegerIncrementLE(base10, LittleEndian(qubits));
+                SwapReverseRegister(qubits);
                 op(qubits);
                 ResetAll(qubits);
             }
         }
+        
+        // let binaries = GenerateAllBinariesOfLength(length);
+        
+        // using (qubits = Qubit[length]) {
+            
+        //     for (base10 in 0 .. Length(binaries) - 1) {
+        //         let binaryStr = binaries[base10];
+        //         SetQubits(qubits, binaryStr);
+        //         op(qubits);
+        //         ResetAll(qubits);
+        //     }
+        // }
     }
     
     
