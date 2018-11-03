@@ -1,6 +1,15 @@
 namespace Utils.Math {
     open Microsoft.Quantum.Primitive;
     open Microsoft.Quantum.Canon;
+    
+    function ClassicalSum (arr: Int[]): Int {
+        mutable sum = 0;
+        for (i in 0..Length(arr) - 1) {
+            set sum = sum + arr[i];
+        }
+
+        return sum;
+    }
 
     operation QFTAdder(start: Qubit[], amount: Qubit[]): Unit {
         body (...) {
