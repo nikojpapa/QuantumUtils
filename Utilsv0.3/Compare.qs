@@ -5,6 +5,18 @@ namespace Utils.Compare {
     open Utils.Math;
     open Utils.Testing;
 
+    operation XIfAllZero(a: Qubit[], target: Qubit): Unit {
+        body (...) {
+            ApplyToEachCA(X, a);
+            Controlled X(a, target);
+            ApplyToEachCA(X, a);
+        }
+
+        adjoint invert;
+        controlled distribute;
+        controlled adjoint distribute;
+    }
+
     operation XIfEqual(a: Qubit[], b: Qubit[], target: Qubit): Unit {
         body (...) {
             let lenA = Length(a);
@@ -15,9 +27,7 @@ namespace Utils.Compare {
                     CNOT(a[i], b[i]);
                 }
 
-                ApplyToEachCA(X, b);
-                Controlled X(b, target);
-                ApplyToEachCA(X, b);
+                XIfAllZero(b, target);
 
                 for (i in lenA - 1..-1..0) {
                     CNOT(a[i], b[i]);
@@ -27,9 +37,7 @@ namespace Utils.Compare {
                     CNOT(b[i], a[i]);
                 }
 
-                ApplyToEachCA(X, a);
-                Controlled X(a, target);
-                ApplyToEachCA(X, a);
+                XIfAllZero(a, target);
 
                 for (i in lenB - 1..-1..0) {
                     CNOT(b[i], a[i]);
@@ -92,5 +100,27 @@ namespace Utils.Compare {
         controlled distribute;
         controlled adjoint distribute;
     }
+    
+    operation XIfLessThanOrEqual(a: Qubit[], b: Qubit[], target: Qubit): Unit {
+        body (...) {
+            using(qubits = Qubit[Length(a) + 2]) {
+                let borrows = Most(qubits);
+                let zeroTest = Tail(qubits);
+                BitSubtractor(a, b, borrows);
 
+                XIfAllZero(a, zeroTest);
+
+                let indicator = Head(borrows);
+                QubitOr(indicator, zeroTest, target);
+
+                XIfAllZero(a, zeroTest);
+
+                (Adjoint BitSubtractor)(a, b, borrows);
+            }
+        }
+
+        adjoint auto;
+        controlled auto;
+        controlled adjoint auto;
+    }
 }

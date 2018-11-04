@@ -105,6 +105,18 @@ namespace Utils.General {
         return str;
     }
     
+    operation IntArrrayToString (arr : Int[]) : String {
+        
+        mutable str = "[";
+        
+        for (i in 0 .. Length(arr) - 1) {
+            set str = str + ToStringI(arr[i]) + ", ";
+        }
+        set str = str + "]";
+
+        return str;
+    }
+    
 }
 
 

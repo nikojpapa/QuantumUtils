@@ -93,10 +93,9 @@ namespace Utils.Math {
             }
 
         }
-        
+
         adjoint invert;
         controlled distribute;
         controlled adjoint distribute;
     }
-
 }
