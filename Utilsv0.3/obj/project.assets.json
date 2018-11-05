@@ -904,10 +904,10 @@
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "0.3.0",
     "restore": {
       "projectUniqueName": "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Utils.csproj",
-      "projectName": "Utils",
+      "projectName": "nikojpapa.Quantum.Utils",
       "projectPath": "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Utils.csproj",
       "packagesPath": "/Users/nicholaspapadopoulos/.nuget/packages/",
       "outputPath": "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/obj/",
