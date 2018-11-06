@@ -904,7 +904,7 @@
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "0.3.0",
+    "version": "0.3.1",
     "restore": {
       "projectUniqueName": "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Utils.csproj",
       "projectName": "nikojpapa.Quantum.Utils",

@@ -4,7 +4,16 @@ namespace Utils.General {
     open Microsoft.Quantum.Extensions.Convert;
     open Microsoft.Quantum.Extensions.Testing;
     open Microsoft.Quantum.Primitive;
-    
+
+
+    function ConcatArrays<'T> (arrays: 'T[][]): 'T[] {
+        mutable retArr = new 'T[0];
+        for (i in 0..Length(arrays) - 1) {
+            set retArr = retArr + arrays[i];
+        }
+
+        return retArr;
+    } 
     
     operation CopyQubits (from : Qubit[], to : Qubit[]) : Unit {
         
