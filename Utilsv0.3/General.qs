@@ -13,7 +13,16 @@ namespace Utils.General {
         }
 
         return retArr;
-    } 
+    }
+
+    function SumIntArray(array: Int[]): Int {
+        mutable sum = 0;
+        for (i in 0..Length(array) - 1) {
+            set sum = sum + array[i];
+        }
+
+        return sum;
+    }
     
     operation CopyQubits (from : Qubit[], to : Qubit[]) : Unit {
         

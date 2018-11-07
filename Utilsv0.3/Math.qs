@@ -1,6 +1,11 @@
 namespace Utils.Math {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Extensions.Math;
     open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Primitive;
+
+    function CeilLogBase2(x: Double): Int {
+        return Ceiling( Log(x) / Log(2.0) );
+    }
     
     function ClassicalSum (arr: Int[]): Int {
         mutable sum = 0;
