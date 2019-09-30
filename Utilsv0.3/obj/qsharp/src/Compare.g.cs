@@ -1,50 +1,50 @@
 #pragma warning disable 1591
 using System;
 using Microsoft.Quantum.Core;
-using Microsoft.Quantum.Primitive;
+using Microsoft.Quantum.Intrinsic;
 using Microsoft.Quantum.Simulation.Core;
 
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":7,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":21}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":22},\"Item2\":{\"Line\":1,\"Column\":23}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":34},\"Item2\":{\"Line\":1,\"Column\":40}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"SupportedFunctors\":[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":8,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":14,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":15,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":16,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":19,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":20},\"Item2\":{\"Line\":1,\"Column\":21}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":32},\"Item2\":{\"Line\":1,\"Column\":33}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":44},\"Item2\":{\"Line\":1,\"Column\":50}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"SupportedFunctors\":[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":20,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":48,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":49,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":50,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":53,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":30},\"Item2\":{\"Line\":1,\"Column\":31}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"Int\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":42},\"Item2\":{\"Line\":1,\"Column\":43}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":50},\"Item2\":{\"Line\":1,\"Column\":56}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Int\"},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"SupportedFunctors\":[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":54,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":62,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":63,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":64,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"_TestXIfQubitEqualToIntImpl\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":66,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":38}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":39},\"Item2\":{\"Line\":1,\"Column\":40}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"length\"]},\"Type\":{\"Case\":\"Int\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":51},\"Item2\":{\"Line\":1,\"Column\":57}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"_TestXIfQubitEqualToIntImpl\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":66,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":38}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"_TestXIfQubitEqualToInt\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":82,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"length\"]},\"Type\":{\"Case\":\"Int\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":35},\"Item2\":{\"Line\":1,\"Column\":41}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"Int\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"_TestXIfQubitEqualToInt\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":82,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":86,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":23},\"Item2\":{\"Line\":1,\"Column\":24}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":35},\"Item2\":{\"Line\":1,\"Column\":36}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":47},\"Item2\":{\"Line\":1,\"Column\":53}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"SupportedFunctors\":[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":87,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":98,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":99,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":100,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":103,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":30},\"Item2\":{\"Line\":1,\"Column\":31}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":42},\"Item2\":{\"Line\":1,\"Column\":43}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":54},\"Item2\":{\"Line\":1,\"Column\":60}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"SupportedFunctors\":[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":104,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":121,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":122,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":123,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":8,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":21}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":22},\"Item2\":{\"Line\":1,\"Column\":23}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":34},\"Item2\":{\"Line\":1,\"Column\":40}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":9,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":15,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":16,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfAllZero\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":17,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":20,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":20},\"Item2\":{\"Line\":1,\"Column\":21}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":32},\"Item2\":{\"Line\":1,\"Column\":33}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":44},\"Item2\":{\"Line\":1,\"Column\":50}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":21,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":49,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":50,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":51,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":54,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":30},\"Item2\":{\"Line\":1,\"Column\":31}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":42},\"Item2\":{\"Line\":1,\"Column\":43}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":50},\"Item2\":{\"Line\":1,\"Column\":56}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Int\"},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":55,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":63,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":64,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfQubitEqualToInt\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":65,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"_TestXIfQubitEqualToIntImpl\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":67,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":38}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":39},\"Item2\":{\"Line\":1,\"Column\":40}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"length\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":51},\"Item2\":{\"Line\":1,\"Column\":57}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"_TestXIfQubitEqualToIntImpl\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":67,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":38}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"_TestXIfQubitEqualToInt\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":83,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"length\"]},\"Type\":{\"Case\":\"Int\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":35},\"Item2\":{\"Line\":1,\"Column\":41}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"Int\"},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"EmptySet\"},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"_TestXIfQubitEqualToInt\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":83,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":87,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":22}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":23},\"Item2\":{\"Line\":1,\"Column\":24}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":35},\"Item2\":{\"Line\":1,\"Column\":36}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":47},\"Item2\":{\"Line\":1,\"Column\":53}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":88,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":99,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":100,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThan\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":101,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":104,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"a\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":30},\"Item2\":{\"Line\":1,\"Column\":31}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"b\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":42},\"Item2\":{\"Line\":1,\"Column\":43}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"target\"]},\"Type\":{\"Case\":\"Qubit\"},\"InferredInformation\":{\"IsMutable\":false,\"HasLocalQuantumDependency\":false},\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":54},\"Item2\":{\"Line\":1,\"Column\":60}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Qubit\"}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":105,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":5}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":122,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":8}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlled\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":123,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":11}},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsControlledAdjoint\"},\"TypeArguments\":{\"Case\":\"Null\"},\"Information\":{\"Characteristics\":{\"Case\":\"Union\",\"Fields\":[{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Adjointable\"}]},{\"Case\":\"SimpleSet\",\"Fields\":[{\"Case\":\"Controllable\"}]}]},\"InferredInformation\":{\"IsSelfAdjoint\":false,\"IsIntrinsic\":false}},\"Parent\":{\"Namespace\":\"Utils.Compare\",\"Name\":\"XIfLessThanOrEqual\"},\"Attributes\":[],\"SourceFile\":\"/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs\",\"Position\":{\"Item1\":124,\"Item2\":8},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":1},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
 #line hidden
 namespace Utils.Compare
 {
-    public class XIfAllZero : Unitary<(QArray<Qubit>,Qubit)>, ICallable
+    public partial class XIfAllZero : Unitary<(IQArray<Qubit>,Qubit)>, ICallable
     {
         public XIfAllZero(IOperationFactory m) : base(m)
         {
         }
 
-        public class In : QTuple<(QArray<Qubit>,Qubit)>, IApplyData
+        public class In : QTuple<(IQArray<Qubit>,Qubit)>, IApplyData
         {
-            public In((QArray<Qubit>,Qubit) data) : base(data)
+            public In((IQArray<Qubit>,Qubit) data) : base(data)
             {
             }
 
@@ -59,63 +59,63 @@ namespace Utils.Compare
             set;
         }
 
-        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveX
+        protected IUnitary<Qubit> MicrosoftQuantumIntrinsicX
         {
             get;
             set;
         }
 
-        public override Func<(QArray<Qubit>,Qubit), QVoid> Body => (__in) =>
+        public override Func<(IQArray<Qubit>,Qubit), QVoid> Body => (__in__) =>
         {
-            var (a,target) = __in;
-#line 10 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-            MicrosoftQuantumCanonApplyToEachCA.Apply((MicrosoftQuantumPrimitiveX, a?.Copy()));
-#line 11 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-            MicrosoftQuantumPrimitiveX.Controlled.Apply((a?.Copy(), target));
-#line 12 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-            MicrosoftQuantumCanonApplyToEachCA.Apply((MicrosoftQuantumPrimitiveX, a?.Copy()));
+            var (a,target) = __in__;
+#line 11 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+            MicrosoftQuantumCanonApplyToEachCA.Apply((MicrosoftQuantumIntrinsicX, a));
+#line 12 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+            MicrosoftQuantumIntrinsicX.Controlled.Apply((a, target));
+#line 13 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+            MicrosoftQuantumCanonApplyToEachCA.Apply((MicrosoftQuantumIntrinsicX, a));
 #line hidden
             return QVoid.Instance;
         }
 
         ;
-        public override Func<(QArray<Qubit>,Qubit), QVoid> AdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,Qubit), QVoid> AdjointBody => (__in__) =>
         {
-            var (a,target) = __in;
+            var (a,target) = __in__;
 #line hidden
-            MicrosoftQuantumCanonApplyToEachCA.Adjoint.Apply((MicrosoftQuantumPrimitiveX, a?.Copy()));
+            MicrosoftQuantumCanonApplyToEachCA.Adjoint.Apply((MicrosoftQuantumIntrinsicX, a));
 #line hidden
-            MicrosoftQuantumPrimitiveX.Controlled.Adjoint.Apply((a?.Copy(), target));
+            MicrosoftQuantumIntrinsicX.Controlled.Adjoint.Apply((a, target));
 #line hidden
-            MicrosoftQuantumCanonApplyToEachCA.Adjoint.Apply((MicrosoftQuantumPrimitiveX, a?.Copy()));
+            MicrosoftQuantumCanonApplyToEachCA.Adjoint.Apply((MicrosoftQuantumIntrinsicX, a));
 #line hidden
             return QVoid.Instance;
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,Qubit)), QVoid> ControlledBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,Qubit)), QVoid> ControlledBody => (__in__) =>
         {
-            var (__controlQubits__,(a,target)) = __in;
+            var (__controlQubits__,(a,target)) = __in__;
 #line hidden
-            MicrosoftQuantumCanonApplyToEachCA.Controlled.Apply((__controlQubits__?.Copy(), (MicrosoftQuantumPrimitiveX, a?.Copy())));
+            MicrosoftQuantumCanonApplyToEachCA.Controlled.Apply((__controlQubits__, (MicrosoftQuantumIntrinsicX, a)));
 #line hidden
-            MicrosoftQuantumPrimitiveX.Controlled.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), target)));
+            MicrosoftQuantumIntrinsicX.Controlled.Controlled.Apply((__controlQubits__, (a, target)));
 #line hidden
-            MicrosoftQuantumCanonApplyToEachCA.Controlled.Apply((__controlQubits__?.Copy(), (MicrosoftQuantumPrimitiveX, a?.Copy())));
+            MicrosoftQuantumCanonApplyToEachCA.Controlled.Apply((__controlQubits__, (MicrosoftQuantumIntrinsicX, a)));
 #line hidden
             return QVoid.Instance;
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,Qubit)), QVoid> ControlledAdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,Qubit)), QVoid> ControlledAdjointBody => (__in__) =>
         {
-            var (__controlQubits__,(a,target)) = __in;
+            var (__controlQubits__,(a,target)) = __in__;
 #line hidden
-            MicrosoftQuantumCanonApplyToEachCA.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (MicrosoftQuantumPrimitiveX, a?.Copy())));
+            MicrosoftQuantumCanonApplyToEachCA.Adjoint.Controlled.Apply((__controlQubits__, (MicrosoftQuantumIntrinsicX, a)));
 #line hidden
-            MicrosoftQuantumPrimitiveX.Controlled.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), target)));
+            MicrosoftQuantumIntrinsicX.Controlled.Adjoint.Controlled.Apply((__controlQubits__, (a, target)));
 #line hidden
-            MicrosoftQuantumCanonApplyToEachCA.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (MicrosoftQuantumPrimitiveX, a?.Copy())));
+            MicrosoftQuantumCanonApplyToEachCA.Adjoint.Controlled.Apply((__controlQubits__, (MicrosoftQuantumIntrinsicX, a)));
 #line hidden
             return QVoid.Instance;
         }
@@ -124,26 +124,26 @@ namespace Utils.Compare
         public override void Init()
         {
             this.MicrosoftQuantumCanonApplyToEachCA = this.Factory.Get<IUnitary>(typeof(Microsoft.Quantum.Canon.ApplyToEachCA<>));
-            this.MicrosoftQuantumPrimitiveX = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Primitive.X));
+            this.MicrosoftQuantumIntrinsicX = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Intrinsic.X));
         }
 
-        public override IApplyData __dataIn((QArray<Qubit>,Qubit) data) => new In(data);
+        public override IApplyData __dataIn((IQArray<Qubit>,Qubit) data) => new In(data);
         public override IApplyData __dataOut(QVoid data) => data;
-        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> a, Qubit target)
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, IQArray<Qubit> a, Qubit target)
         {
-            return __m__.Run<XIfAllZero, (QArray<Qubit>,Qubit), QVoid>((a, target));
+            return __m__.Run<XIfAllZero, (IQArray<Qubit>,Qubit), QVoid>((a, target));
         }
     }
 
-    public class XIfEqual : Unitary<(QArray<Qubit>,QArray<Qubit>,Qubit)>, ICallable
+    public partial class XIfEqual : Unitary<(IQArray<Qubit>,IQArray<Qubit>,Qubit)>, ICallable
     {
         public XIfEqual(IOperationFactory m) : base(m)
         {
         }
 
-        public class In : QTuple<(QArray<Qubit>,QArray<Qubit>,Qubit)>, IApplyData
+        public class In : QTuple<(IQArray<Qubit>,IQArray<Qubit>,Qubit)>, IApplyData
         {
-            public In((QArray<Qubit>,QArray<Qubit>,Qubit) data) : base(data)
+            public In((IQArray<Qubit>,IQArray<Qubit>,Qubit) data) : base(data)
             {
             }
 
@@ -164,64 +164,64 @@ namespace Utils.Compare
             set;
         }
 
-        protected IUnitary<(Qubit,Qubit)> MicrosoftQuantumPrimitiveCNOT
+        protected IUnitary<(Qubit,Qubit)> MicrosoftQuantumIntrinsicCNOT
         {
             get;
             set;
         }
 
-        protected IUnitary<(QArray<Qubit>,Qubit)> XIfAllZero
+        protected IUnitary<(IQArray<Qubit>,Qubit)> XIfAllZero
         {
             get;
             set;
         }
 
-        public override Func<(QArray<Qubit>,QArray<Qubit>,Qubit), QVoid> Body => (__in) =>
+        public override Func<(IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid> Body => (__in__) =>
         {
-            var (a,b,target) = __in;
-#line 22 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+            var (a,b,target) = __in__;
+#line 23 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
             var lenA = a.Length;
-#line 23 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 24 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
             var lenB = b.Length;
-#line 25 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 26 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
             if ((lenA <= lenB))
             {
-#line 26 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 27 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
                 foreach (var i in new Range(0L, (lenA - 1L)))
 #line hidden
                 {
-#line 27 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    MicrosoftQuantumPrimitiveCNOT.Apply((a[i], b[i]));
+#line 28 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    MicrosoftQuantumIntrinsicCNOT.Apply((a[i], b[i]));
                 }
 
-#line 30 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                XIfAllZero.Apply((b?.Copy(), target));
-#line 32 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 31 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                XIfAllZero.Apply((b, target));
+#line 33 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
                 foreach (var i in new Range((lenA - 1L), -(1L), 0L))
 #line hidden
                 {
-#line 33 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    MicrosoftQuantumPrimitiveCNOT.Apply((a[i], b[i]));
+#line 34 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    MicrosoftQuantumIntrinsicCNOT.Apply((a[i], b[i]));
                 }
             }
             else
             {
-#line 36 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 37 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
                 foreach (var i in new Range(0L, (lenB - 1L)))
 #line hidden
                 {
-#line 37 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    MicrosoftQuantumPrimitiveCNOT.Apply((b[i], a[i]));
+#line 38 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    MicrosoftQuantumIntrinsicCNOT.Apply((b[i], a[i]));
                 }
 
-#line 40 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                XIfAllZero.Apply((a?.Copy(), target));
-#line 42 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 41 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                XIfAllZero.Apply((a, target));
+#line 43 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
                 foreach (var i in new Range((lenB - 1L), -(1L), 0L))
 #line hidden
                 {
-#line 43 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    MicrosoftQuantumPrimitiveCNOT.Apply((b[i], a[i]));
+#line 44 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    MicrosoftQuantumIntrinsicCNOT.Apply((b[i], a[i]));
                 }
             }
 
@@ -230,52 +230,52 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,QArray<Qubit>,Qubit), QVoid> AdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid> AdjointBody => (__in__) =>
         {
-            var (a,b,target) = __in;
+            var (a,b,target) = __in__;
 #line hidden
-            var lenA = a.Length;
+            var __qsVar0__lenA__ = a.Length;
 #line hidden
-            var lenB = b.Length;
+            var __qsVar1__lenB__ = b.Length;
 #line hidden
-            if ((lenA <= lenB))
+            if ((__qsVar0__lenA__ <= __qsVar1__lenB__))
             {
 #line hidden
-                foreach (var i in RangeReverse.Apply(new Range((lenA - 1L), -(1L), 0L)))
+                foreach (var __qsVar5__i__ in RangeReverse.Apply(new Range((__qsVar0__lenA__ - 1L), -(1L), 0L)))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Adjoint.Apply((a[i], b[i]));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Apply((a[__qsVar5__i__], b[__qsVar5__i__]));
                 }
 
 #line hidden
-                XIfAllZero.Adjoint.Apply((b?.Copy(), target));
+                XIfAllZero.Adjoint.Apply((b, target));
 #line hidden
-                foreach (var i in RangeReverse.Apply(new Range(0L, (lenA - 1L))))
+                foreach (var __qsVar4__i__ in RangeReverse.Apply(new Range(0L, (__qsVar0__lenA__ - 1L))))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Adjoint.Apply((a[i], b[i]));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Apply((a[__qsVar4__i__], b[__qsVar4__i__]));
                 }
             }
             else
             {
 #line hidden
-                foreach (var i in RangeReverse.Apply(new Range((lenB - 1L), -(1L), 0L)))
+                foreach (var __qsVar3__i__ in RangeReverse.Apply(new Range((__qsVar1__lenB__ - 1L), -(1L), 0L)))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Adjoint.Apply((b[i], a[i]));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Apply((b[__qsVar3__i__], a[__qsVar3__i__]));
                 }
 
 #line hidden
-                XIfAllZero.Adjoint.Apply((a?.Copy(), target));
+                XIfAllZero.Adjoint.Apply((a, target));
 #line hidden
-                foreach (var i in RangeReverse.Apply(new Range(0L, (lenB - 1L))))
+                foreach (var __qsVar2__i__ in RangeReverse.Apply(new Range(0L, (__qsVar1__lenB__ - 1L))))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Adjoint.Apply((b[i], a[i]));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Apply((b[__qsVar2__i__], a[__qsVar2__i__]));
                 }
             }
 
@@ -284,9 +284,9 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,QArray<Qubit>,Qubit)), QVoid> ControlledBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,Qubit)), QVoid> ControlledBody => (__in__) =>
         {
-            var (__controlQubits__,(a,b,target)) = __in;
+            var (__controlQubits__,(a,b,target)) = __in__;
 #line hidden
             var lenA = a.Length;
 #line hidden
@@ -299,17 +299,17 @@ namespace Utils.Compare
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Controlled.Apply((__controlQubits__?.Copy(), (a[i], b[i])));
+                    MicrosoftQuantumIntrinsicCNOT.Controlled.Apply((__controlQubits__, (a[i], b[i])));
                 }
 
 #line hidden
-                XIfAllZero.Controlled.Apply((__controlQubits__?.Copy(), (b?.Copy(), target)));
+                XIfAllZero.Controlled.Apply((__controlQubits__, (b, target)));
 #line hidden
                 foreach (var i in new Range((lenA - 1L), -(1L), 0L))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Controlled.Apply((__controlQubits__?.Copy(), (a[i], b[i])));
+                    MicrosoftQuantumIntrinsicCNOT.Controlled.Apply((__controlQubits__, (a[i], b[i])));
                 }
             }
             else
@@ -319,17 +319,17 @@ namespace Utils.Compare
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Controlled.Apply((__controlQubits__?.Copy(), (b[i], a[i])));
+                    MicrosoftQuantumIntrinsicCNOT.Controlled.Apply((__controlQubits__, (b[i], a[i])));
                 }
 
 #line hidden
-                XIfAllZero.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), target)));
+                XIfAllZero.Controlled.Apply((__controlQubits__, (a, target)));
 #line hidden
                 foreach (var i in new Range((lenB - 1L), -(1L), 0L))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Controlled.Apply((__controlQubits__?.Copy(), (b[i], a[i])));
+                    MicrosoftQuantumIntrinsicCNOT.Controlled.Apply((__controlQubits__, (b[i], a[i])));
                 }
             }
 
@@ -338,52 +338,52 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,QArray<Qubit>,Qubit)), QVoid> ControlledAdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,Qubit)), QVoid> ControlledAdjointBody => (__in__) =>
         {
-            var (__controlQubits__,(a,b,target)) = __in;
+            var (__controlQubits__,(a,b,target)) = __in__;
 #line hidden
-            var lenA = a.Length;
+            var __qsVar0__lenA__ = a.Length;
 #line hidden
-            var lenB = b.Length;
+            var __qsVar1__lenB__ = b.Length;
 #line hidden
-            if ((lenA <= lenB))
+            if ((__qsVar0__lenA__ <= __qsVar1__lenB__))
             {
 #line hidden
-                foreach (var i in RangeReverse.Apply(new Range((lenA - 1L), -(1L), 0L)))
+                foreach (var __qsVar5__i__ in RangeReverse.Apply(new Range((__qsVar0__lenA__ - 1L), -(1L), 0L)))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a[i], b[i])));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Controlled.Apply((__controlQubits__, (a[__qsVar5__i__], b[__qsVar5__i__])));
                 }
 
 #line hidden
-                XIfAllZero.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (b?.Copy(), target)));
+                XIfAllZero.Adjoint.Controlled.Apply((__controlQubits__, (b, target)));
 #line hidden
-                foreach (var i in RangeReverse.Apply(new Range(0L, (lenA - 1L))))
+                foreach (var __qsVar4__i__ in RangeReverse.Apply(new Range(0L, (__qsVar0__lenA__ - 1L))))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a[i], b[i])));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Controlled.Apply((__controlQubits__, (a[__qsVar4__i__], b[__qsVar4__i__])));
                 }
             }
             else
             {
 #line hidden
-                foreach (var i in RangeReverse.Apply(new Range((lenB - 1L), -(1L), 0L)))
+                foreach (var __qsVar3__i__ in RangeReverse.Apply(new Range((__qsVar1__lenB__ - 1L), -(1L), 0L)))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (b[i], a[i])));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Controlled.Apply((__controlQubits__, (b[__qsVar3__i__], a[__qsVar3__i__])));
                 }
 
 #line hidden
-                XIfAllZero.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), target)));
+                XIfAllZero.Adjoint.Controlled.Apply((__controlQubits__, (a, target)));
 #line hidden
-                foreach (var i in RangeReverse.Apply(new Range(0L, (lenB - 1L))))
+                foreach (var __qsVar2__i__ in RangeReverse.Apply(new Range(0L, (__qsVar1__lenB__ - 1L))))
 #line hidden
                 {
 #line hidden
-                    MicrosoftQuantumPrimitiveCNOT.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (b[i], a[i])));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Controlled.Apply((__controlQubits__, (b[__qsVar2__i__], a[__qsVar2__i__])));
                 }
             }
 
@@ -396,27 +396,27 @@ namespace Utils.Compare
         {
             this.Length = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Core.Length<>));
             this.RangeReverse = this.Factory.Get<ICallable<Range, Range>>(typeof(Microsoft.Quantum.Core.RangeReverse));
-            this.MicrosoftQuantumPrimitiveCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Primitive.CNOT));
-            this.XIfAllZero = this.Factory.Get<IUnitary<(QArray<Qubit>,Qubit)>>(typeof(XIfAllZero));
+            this.MicrosoftQuantumIntrinsicCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Intrinsic.CNOT));
+            this.XIfAllZero = this.Factory.Get<IUnitary<(IQArray<Qubit>,Qubit)>>(typeof(XIfAllZero));
         }
 
-        public override IApplyData __dataIn((QArray<Qubit>,QArray<Qubit>,Qubit) data) => new In(data);
+        public override IApplyData __dataIn((IQArray<Qubit>,IQArray<Qubit>,Qubit) data) => new In(data);
         public override IApplyData __dataOut(QVoid data) => data;
-        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> a, QArray<Qubit> b, Qubit target)
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, IQArray<Qubit> a, IQArray<Qubit> b, Qubit target)
         {
-            return __m__.Run<XIfEqual, (QArray<Qubit>,QArray<Qubit>,Qubit), QVoid>((a, b, target));
+            return __m__.Run<XIfEqual, (IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid>((a, b, target));
         }
     }
 
-    public class XIfQubitEqualToInt : Unitary<(QArray<Qubit>,Int64,Qubit)>, ICallable
+    public partial class XIfQubitEqualToInt : Unitary<(IQArray<Qubit>,Int64,Qubit)>, ICallable
     {
         public XIfQubitEqualToInt(IOperationFactory m) : base(m)
         {
         }
 
-        public class In : QTuple<(QArray<Qubit>,Int64,Qubit)>, IApplyData
+        public class In : QTuple<(IQArray<Qubit>,Int64,Qubit)>, IApplyData
         {
-            public In((QArray<Qubit>,Int64,Qubit) data) : base(data)
+            public In((IQArray<Qubit>,Int64,Qubit) data) : base(data)
             {
             }
 
@@ -443,33 +443,53 @@ namespace Utils.Compare
             set;
         }
 
-        protected IUnitary<(QArray<Qubit>,QArray<Qubit>,Qubit)> XIfEqual
+        protected IUnitary<(IQArray<Qubit>,IQArray<Qubit>,Qubit)> XIfEqual
         {
             get;
             set;
         }
 
-        protected IUnitary<(QArray<Qubit>,Int64)> UtilsMathQFTAdderInt
+        protected IUnitary<(IQArray<Qubit>,Int64)> UtilsMathQFTAdderInt
         {
             get;
             set;
         }
 
-        public override Func<(QArray<Qubit>,Int64,Qubit), QVoid> Body => (__in) =>
+        public override Func<(IQArray<Qubit>,Int64,Qubit), QVoid> Body => (__in__) =>
         {
-            var (a,b,target) = __in;
+            var (a,b,target) = __in__;
 #line hidden
             {
-#line 56 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 57 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
                 var bQubit = Allocate.Apply(a.Length);
-#line 57 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                UtilsMathQFTAdderInt.Apply((bQubit?.Copy(), b));
-#line 58 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                XIfEqual.Apply((a?.Copy(), bQubit?.Copy(), target));
-#line 59 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                UtilsMathQFTAdderInt.Adjoint.Apply((bQubit?.Copy(), b));
 #line hidden
-                Release.Apply(bQubit);
+                Exception __arg1__ = null;
+                try
+                {
+#line 58 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    UtilsMathQFTAdderInt.Apply((bQubit, b));
+#line 59 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    XIfEqual.Apply((a, bQubit, target));
+#line 60 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    UtilsMathQFTAdderInt.Adjoint.Apply((bQubit, b));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(bQubit);
+                }
             }
 
 #line hidden
@@ -477,21 +497,41 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,Int64,Qubit), QVoid> AdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,Int64,Qubit), QVoid> AdjointBody => (__in__) =>
         {
-            var (a,b,target) = __in;
+            var (a,b,target) = __in__;
 #line hidden
             {
 #line hidden
-                var bQubit = Allocate.Apply(a.Length);
+                var __qsVar0__bQubit__ = Allocate.Apply(a.Length);
 #line hidden
-                UtilsMathQFTAdderInt.Adjoint.Adjoint.Apply((bQubit?.Copy(), b));
+                Exception __arg1__ = null;
+                try
+                {
 #line hidden
-                XIfEqual.Adjoint.Apply((a?.Copy(), bQubit?.Copy(), target));
+                    UtilsMathQFTAdderInt.Adjoint.Adjoint.Apply((__qsVar0__bQubit__, b));
 #line hidden
-                UtilsMathQFTAdderInt.Adjoint.Apply((bQubit?.Copy(), b));
+                    XIfEqual.Adjoint.Apply((a, __qsVar0__bQubit__, target));
 #line hidden
-                Release.Apply(bQubit);
+                    UtilsMathQFTAdderInt.Adjoint.Apply((__qsVar0__bQubit__, b));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(__qsVar0__bQubit__);
+                }
             }
 
 #line hidden
@@ -499,21 +539,41 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,Int64,Qubit)), QVoid> ControlledBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,Int64,Qubit)), QVoid> ControlledBody => (__in__) =>
         {
-            var (__controlQubits__,(a,b,target)) = __in;
+            var (__controlQubits__,(a,b,target)) = __in__;
 #line hidden
             {
 #line hidden
                 var bQubit = Allocate.Apply(a.Length);
 #line hidden
-                UtilsMathQFTAdderInt.Controlled.Apply((__controlQubits__?.Copy(), (bQubit?.Copy(), b)));
+                Exception __arg1__ = null;
+                try
+                {
 #line hidden
-                XIfEqual.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), bQubit?.Copy(), target)));
+                    UtilsMathQFTAdderInt.Controlled.Apply((__controlQubits__, (bQubit, b)));
 #line hidden
-                UtilsMathQFTAdderInt.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (bQubit?.Copy(), b)));
+                    XIfEqual.Controlled.Apply((__controlQubits__, (a, bQubit, target)));
 #line hidden
-                Release.Apply(bQubit);
+                    UtilsMathQFTAdderInt.Adjoint.Controlled.Apply((__controlQubits__, (bQubit, b)));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(bQubit);
+                }
             }
 
 #line hidden
@@ -521,21 +581,41 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,Int64,Qubit)), QVoid> ControlledAdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,Int64,Qubit)), QVoid> ControlledAdjointBody => (__in__) =>
         {
-            var (__controlQubits__,(a,b,target)) = __in;
+            var (__controlQubits__,(a,b,target)) = __in__;
 #line hidden
             {
 #line hidden
-                var bQubit = Allocate.Apply(a.Length);
+                var __qsVar0__bQubit__ = Allocate.Apply(a.Length);
 #line hidden
-                UtilsMathQFTAdderInt.Adjoint.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (bQubit?.Copy(), b)));
+                Exception __arg1__ = null;
+                try
+                {
 #line hidden
-                XIfEqual.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), bQubit?.Copy(), target)));
+                    UtilsMathQFTAdderInt.Adjoint.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar0__bQubit__, b)));
 #line hidden
-                UtilsMathQFTAdderInt.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (bQubit?.Copy(), b)));
+                    XIfEqual.Adjoint.Controlled.Apply((__controlQubits__, (a, __qsVar0__bQubit__, target)));
 #line hidden
-                Release.Apply(bQubit);
+                    UtilsMathQFTAdderInt.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar0__bQubit__, b)));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(__qsVar0__bQubit__);
+                }
             }
 
 #line hidden
@@ -546,29 +626,29 @@ namespace Utils.Compare
         public override void Init()
         {
             this.Length = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Core.Length<>));
-            this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Primitive.Allocate));
-            this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Primitive.Release));
-            this.XIfEqual = this.Factory.Get<IUnitary<(QArray<Qubit>,QArray<Qubit>,Qubit)>>(typeof(XIfEqual));
-            this.UtilsMathQFTAdderInt = this.Factory.Get<IUnitary<(QArray<Qubit>,Int64)>>(typeof(Utils.Math.QFTAdderInt));
+            this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Intrinsic.Allocate));
+            this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Intrinsic.Release));
+            this.XIfEqual = this.Factory.Get<IUnitary<(IQArray<Qubit>,IQArray<Qubit>,Qubit)>>(typeof(XIfEqual));
+            this.UtilsMathQFTAdderInt = this.Factory.Get<IUnitary<(IQArray<Qubit>,Int64)>>(typeof(Utils.Math.QFTAdderInt));
         }
 
-        public override IApplyData __dataIn((QArray<Qubit>,Int64,Qubit) data) => new In(data);
+        public override IApplyData __dataIn((IQArray<Qubit>,Int64,Qubit) data) => new In(data);
         public override IApplyData __dataOut(QVoid data) => data;
-        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> a, Int64 b, Qubit target)
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, IQArray<Qubit> a, Int64 b, Qubit target)
         {
-            return __m__.Run<XIfQubitEqualToInt, (QArray<Qubit>,Int64,Qubit), QVoid>((a, b, target));
+            return __m__.Run<XIfQubitEqualToInt, (IQArray<Qubit>,Int64,Qubit), QVoid>((a, b, target));
         }
     }
 
-    public class _TestXIfQubitEqualToIntImpl : Operation<(QArray<Qubit>,Int64), QVoid>, ICallable
+    public partial class _TestXIfQubitEqualToIntImpl : Operation<(IQArray<Qubit>,Int64), QVoid>, ICallable
     {
         public _TestXIfQubitEqualToIntImpl(IOperationFactory m) : base(m)
         {
         }
 
-        public class In : QTuple<(QArray<Qubit>,Int64)>, IApplyData
+        public class In : QTuple<(IQArray<Qubit>,Int64)>, IApplyData
         {
-            public In((QArray<Qubit>,Int64) data) : base(data)
+            public In((IQArray<Qubit>,Int64) data) : base(data)
             {
             }
 
@@ -601,13 +681,13 @@ namespace Utils.Compare
             set;
         }
 
-        protected ICallable<Qubit, Result> M
+        protected ICallable<Qubit, Result> MicrosoftQuantumIntrinsicM
         {
             get;
             set;
         }
 
-        protected ICallable<String, QVoid> Message
+        protected ICallable<String, QVoid> MicrosoftQuantumIntrinsicMessage
         {
             get;
             set;
@@ -619,53 +699,73 @@ namespace Utils.Compare
             set;
         }
 
-        protected ICallable<QArray<Qubit>, QVoid> ResetAll
+        protected ICallable<IQArray<Qubit>, QVoid> MicrosoftQuantumIntrinsicResetAll
         {
             get;
             set;
         }
 
-        protected IUnitary<(QArray<Qubit>,Int64,Qubit)> XIfQubitEqualToInt
+        protected IUnitary<(IQArray<Qubit>,Int64,Qubit)> XIfQubitEqualToInt
         {
             get;
             set;
         }
 
-        protected ICallable<QArray<Qubit>, Int64> UtilsGeneralQubitsToInt
+        protected ICallable<IQArray<Qubit>, Int64> UtilsGeneralQubitsToInt
         {
             get;
             set;
         }
 
-        public override Func<(QArray<Qubit>,Int64), QVoid> Body => (__in) =>
+        public override Func<(IQArray<Qubit>,Int64), QVoid> Body => (__in__) =>
         {
-            var (a,length) = __in;
-#line 68 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-            var aVal = UtilsGeneralQubitsToInt.Apply(a?.Copy());
-#line 69 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+            var (a,length) = __in__;
+#line 69 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+            var aVal = UtilsGeneralQubitsToInt.Apply(a);
+#line 70 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
             var maxA = (2L.Pow(a.Length) - 1L);
-#line 71 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 72 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
             foreach (var b in new Range(0L, maxA))
 #line hidden
             {
 #line hidden
                 {
-#line 72 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 73 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
                     var qubits = Allocate.Apply(1L);
-#line 73 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    XIfQubitEqualToInt.Apply((a?.Copy(), b, qubits[0L]));
-#line 75 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    var calcAns = MicrosoftQuantumCanonBoolFromResult.Apply(M.Apply(qubits[0L]));
-#line 76 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    var trueAns = (aVal == b);
-#line 77 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    MicrosoftQuantumCanonAssertBoolEqual.Apply((calcAns, trueAns, String.Format("{0} ?= {1}; calcAns: {2}, trueAns: {3}", aVal, b, calcAns, trueAns)));
-#line 78 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    Message.Apply(String.Format("{0} ?= {1} passed", aVal, b));
-#line 79 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                    ResetAll.Apply(qubits?.Copy());
 #line hidden
-                    Release.Apply(qubits);
+                    Exception __arg1__ = null;
+                    try
+                    {
+#line 74 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                        XIfQubitEqualToInt.Apply((a, b, qubits[0L]));
+#line 76 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                        var calcAns = MicrosoftQuantumCanonBoolFromResult.Apply(MicrosoftQuantumIntrinsicM.Apply(qubits[0L]));
+#line 77 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                        var trueAns = (aVal == b);
+#line 78 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                        MicrosoftQuantumCanonAssertBoolEqual.Apply((calcAns, trueAns, String.Format("{0} ?= {1}; calcAns: {2}, trueAns: {3}", aVal, b, calcAns, trueAns)));
+#line 79 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                        MicrosoftQuantumIntrinsicMessage.Apply(String.Format("{0} ?= {1} passed", aVal, b));
+#line 80 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                        MicrosoftQuantumIntrinsicResetAll.Apply(qubits);
+                    }
+#line hidden
+                    catch (Exception __arg2__)
+                    {
+                        __arg1__ = __arg2__;
+                        throw __arg1__;
+                    }
+#line hidden
+                    finally
+                    {
+                        if (__arg1__ != null)
+                        {
+                            throw __arg1__;
+                        }
+
+#line hidden
+                        Release.Apply(qubits);
+                    }
                 }
             }
 
@@ -679,24 +779,24 @@ namespace Utils.Compare
             this.MicrosoftQuantumCanonAssertBoolEqual = this.Factory.Get<ICallable<(Boolean,Boolean,String), QVoid>>(typeof(Microsoft.Quantum.Canon.AssertBoolEqual));
             this.MicrosoftQuantumCanonBoolFromResult = this.Factory.Get<ICallable<Result, Boolean>>(typeof(Microsoft.Quantum.Canon.BoolFromResult));
             this.Length = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Core.Length<>));
-            this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Primitive.Allocate));
-            this.M = this.Factory.Get<ICallable<Qubit, Result>>(typeof(Microsoft.Quantum.Primitive.M));
-            this.Message = this.Factory.Get<ICallable<String, QVoid>>(typeof(Microsoft.Quantum.Primitive.Message));
-            this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Primitive.Release));
-            this.ResetAll = this.Factory.Get<ICallable<QArray<Qubit>, QVoid>>(typeof(Microsoft.Quantum.Primitive.ResetAll));
-            this.XIfQubitEqualToInt = this.Factory.Get<IUnitary<(QArray<Qubit>,Int64,Qubit)>>(typeof(XIfQubitEqualToInt));
-            this.UtilsGeneralQubitsToInt = this.Factory.Get<ICallable<QArray<Qubit>, Int64>>(typeof(Utils.General.QubitsToInt));
+            this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Intrinsic.Allocate));
+            this.MicrosoftQuantumIntrinsicM = this.Factory.Get<ICallable<Qubit, Result>>(typeof(Microsoft.Quantum.Intrinsic.M));
+            this.MicrosoftQuantumIntrinsicMessage = this.Factory.Get<ICallable<String, QVoid>>(typeof(Microsoft.Quantum.Intrinsic.Message));
+            this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Intrinsic.Release));
+            this.MicrosoftQuantumIntrinsicResetAll = this.Factory.Get<ICallable<IQArray<Qubit>, QVoid>>(typeof(Microsoft.Quantum.Intrinsic.ResetAll));
+            this.XIfQubitEqualToInt = this.Factory.Get<IUnitary<(IQArray<Qubit>,Int64,Qubit)>>(typeof(XIfQubitEqualToInt));
+            this.UtilsGeneralQubitsToInt = this.Factory.Get<ICallable<IQArray<Qubit>, Int64>>(typeof(Utils.General.QubitsToInt));
         }
 
-        public override IApplyData __dataIn((QArray<Qubit>,Int64) data) => new In(data);
+        public override IApplyData __dataIn((IQArray<Qubit>,Int64) data) => new In(data);
         public override IApplyData __dataOut(QVoid data) => data;
-        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> a, Int64 length)
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, IQArray<Qubit> a, Int64 length)
         {
-            return __m__.Run<_TestXIfQubitEqualToIntImpl, (QArray<Qubit>,Int64), QVoid>((a, length));
+            return __m__.Run<_TestXIfQubitEqualToIntImpl, (IQArray<Qubit>,Int64), QVoid>((a, length));
         }
     }
 
-    public class _TestXIfQubitEqualToInt : Operation<Int64, QVoid>, ICallable
+    public partial class _TestXIfQubitEqualToInt : Operation<Int64, QVoid>, ICallable
     {
         public _TestXIfQubitEqualToInt(IOperationFactory m) : base(m)
         {
@@ -704,7 +804,7 @@ namespace Utils.Compare
 
         String ICallable.Name => "_TestXIfQubitEqualToInt";
         String ICallable.FullName => "Utils.Compare._TestXIfQubitEqualToInt";
-        protected ICallable<(QArray<Qubit>,Int64), QVoid> _TestXIfQubitEqualToIntImpl
+        protected ICallable<(IQArray<Qubit>,Int64), QVoid> _TestXIfQubitEqualToIntImpl
         {
             get;
             set;
@@ -716,11 +816,11 @@ namespace Utils.Compare
             set;
         }
 
-        public override Func<Int64, QVoid> Body => (__in) =>
+        public override Func<Int64, QVoid> Body => (__in__) =>
         {
-            var length = __in;
-#line 84 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-            UtilsTestingRunOnAllBinariesOfLength.Apply((length, _TestXIfQubitEqualToIntImpl.Partial(new Func<QArray<Qubit>, (QArray<Qubit>,Int64)>((_arg1) => (_arg1, length)))));
+            var length = __in__;
+#line 85 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+            UtilsTestingRunOnAllBinariesOfLength.Apply((length, _TestXIfQubitEqualToIntImpl.Partial(new Func<IQArray<Qubit>, (IQArray<Qubit>,Int64)>((__arg1__) => (__arg1__, length)))));
 #line hidden
             return QVoid.Instance;
         }
@@ -728,7 +828,7 @@ namespace Utils.Compare
         ;
         public override void Init()
         {
-            this._TestXIfQubitEqualToIntImpl = this.Factory.Get<ICallable<(QArray<Qubit>,Int64), QVoid>>(typeof(_TestXIfQubitEqualToIntImpl));
+            this._TestXIfQubitEqualToIntImpl = this.Factory.Get<ICallable<(IQArray<Qubit>,Int64), QVoid>>(typeof(_TestXIfQubitEqualToIntImpl));
             this.UtilsTestingRunOnAllBinariesOfLength = this.Factory.Get<ICallable<(Int64,ICallable), QVoid>>(typeof(Utils.Testing.RunOnAllBinariesOfLength));
         }
 
@@ -740,15 +840,15 @@ namespace Utils.Compare
         }
     }
 
-    public class XIfLessThan : Unitary<(QArray<Qubit>,QArray<Qubit>,Qubit)>, ICallable
+    public partial class XIfLessThan : Unitary<(IQArray<Qubit>,IQArray<Qubit>,Qubit)>, ICallable
     {
         public XIfLessThan(IOperationFactory m) : base(m)
         {
         }
 
-        public class In : QTuple<(QArray<Qubit>,QArray<Qubit>,Qubit)>, IApplyData
+        public class In : QTuple<(IQArray<Qubit>,IQArray<Qubit>,Qubit)>, IApplyData
         {
-            public In((QArray<Qubit>,QArray<Qubit>,Qubit) data) : base(data)
+            public In((IQArray<Qubit>,IQArray<Qubit>,Qubit) data) : base(data)
             {
             }
 
@@ -757,7 +857,7 @@ namespace Utils.Compare
 
         String ICallable.Name => "XIfLessThan";
         String ICallable.FullName => "Utils.Compare.XIfLessThan";
-        protected ICallable MicrosoftQuantumCanonHead
+        protected ICallable MicrosoftQuantumArraysHead
         {
             get;
             set;
@@ -775,7 +875,7 @@ namespace Utils.Compare
             set;
         }
 
-        protected IUnitary<(Qubit,Qubit)> MicrosoftQuantumPrimitiveCNOT
+        protected IUnitary<(Qubit,Qubit)> MicrosoftQuantumIntrinsicCNOT
         {
             get;
             set;
@@ -787,29 +887,49 @@ namespace Utils.Compare
             set;
         }
 
-        protected IUnitary<(QArray<Qubit>,QArray<Qubit>,QArray<Qubit>)> UtilsMathBitSubtractor
+        protected IUnitary<(IQArray<Qubit>,IQArray<Qubit>,IQArray<Qubit>)> UtilsMathBitSubtractor
         {
             get;
             set;
         }
 
-        public override Func<(QArray<Qubit>,QArray<Qubit>,Qubit), QVoid> Body => (__in) =>
+        public override Func<(IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid> Body => (__in__) =>
         {
-            var (a,b,target) = __in;
+            var (a,b,target) = __in__;
 #line hidden
             {
-#line 89 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 90 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
                 var borrows = Allocate.Apply((a.Length + 1L));
-#line 90 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                UtilsMathBitSubtractor.Apply((a?.Copy(), b?.Copy(), borrows?.Copy()));
-#line 92 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                var indicator = MicrosoftQuantumCanonHead.Apply<Qubit>(borrows);
-#line 93 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                MicrosoftQuantumPrimitiveCNOT.Apply((indicator, target));
-#line 95 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                UtilsMathBitSubtractor.Adjoint.Apply((a?.Copy(), b?.Copy(), borrows?.Copy()));
 #line hidden
-                Release.Apply(borrows);
+                Exception __arg1__ = null;
+                try
+                {
+#line 91 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    UtilsMathBitSubtractor.Apply((a, b, borrows));
+#line 93 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    var indicator = MicrosoftQuantumArraysHead.Apply<Qubit>(borrows);
+#line 94 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    MicrosoftQuantumIntrinsicCNOT.Apply((indicator, target));
+#line 96 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    UtilsMathBitSubtractor.Adjoint.Apply((a, b, borrows));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(borrows);
+                }
             }
 
 #line hidden
@@ -817,23 +937,43 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,QArray<Qubit>,Qubit), QVoid> AdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid> AdjointBody => (__in__) =>
         {
-            var (a,b,target) = __in;
+            var (a,b,target) = __in__;
 #line hidden
             {
 #line hidden
-                var borrows = Allocate.Apply((a.Length + 1L));
+                var __qsVar0__borrows__ = Allocate.Apply((a.Length + 1L));
 #line hidden
-                var indicator = MicrosoftQuantumCanonHead.Apply<Qubit>(borrows);
+                Exception __arg1__ = null;
+                try
+                {
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Adjoint.Apply((a?.Copy(), b?.Copy(), borrows?.Copy()));
+                    var __qsVar1__indicator__ = MicrosoftQuantumArraysHead.Apply<Qubit>(__qsVar0__borrows__);
 #line hidden
-                MicrosoftQuantumPrimitiveCNOT.Adjoint.Apply((indicator, target));
+                    UtilsMathBitSubtractor.Adjoint.Adjoint.Apply((a, b, __qsVar0__borrows__));
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Apply((a?.Copy(), b?.Copy(), borrows?.Copy()));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Apply((__qsVar1__indicator__, target));
 #line hidden
-                Release.Apply(borrows);
+                    UtilsMathBitSubtractor.Adjoint.Apply((a, b, __qsVar0__borrows__));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(__qsVar0__borrows__);
+                }
             }
 
 #line hidden
@@ -841,23 +981,43 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,QArray<Qubit>,Qubit)), QVoid> ControlledBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,Qubit)), QVoid> ControlledBody => (__in__) =>
         {
-            var (__controlQubits__,(a,b,target)) = __in;
+            var (__controlQubits__,(a,b,target)) = __in__;
 #line hidden
             {
 #line hidden
                 var borrows = Allocate.Apply((a.Length + 1L));
 #line hidden
-                UtilsMathBitSubtractor.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), b?.Copy(), borrows?.Copy())));
+                Exception __arg1__ = null;
+                try
+                {
 #line hidden
-                var indicator = MicrosoftQuantumCanonHead.Apply<Qubit>(borrows);
+                    UtilsMathBitSubtractor.Controlled.Apply((__controlQubits__, (a, b, borrows)));
 #line hidden
-                MicrosoftQuantumPrimitiveCNOT.Controlled.Apply((__controlQubits__?.Copy(), (indicator, target)));
+                    var indicator = MicrosoftQuantumArraysHead.Apply<Qubit>(borrows);
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), b?.Copy(), borrows?.Copy())));
+                    MicrosoftQuantumIntrinsicCNOT.Controlled.Apply((__controlQubits__, (indicator, target)));
 #line hidden
-                Release.Apply(borrows);
+                    UtilsMathBitSubtractor.Adjoint.Controlled.Apply((__controlQubits__, (a, b, borrows)));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(borrows);
+                }
             }
 
 #line hidden
@@ -865,23 +1025,43 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,QArray<Qubit>,Qubit)), QVoid> ControlledAdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,Qubit)), QVoid> ControlledAdjointBody => (__in__) =>
         {
-            var (__controlQubits__,(a,b,target)) = __in;
+            var (__controlQubits__,(a,b,target)) = __in__;
 #line hidden
             {
 #line hidden
-                var borrows = Allocate.Apply((a.Length + 1L));
+                var __qsVar0__borrows__ = Allocate.Apply((a.Length + 1L));
 #line hidden
-                var indicator = MicrosoftQuantumCanonHead.Apply<Qubit>(borrows);
+                Exception __arg1__ = null;
+                try
+                {
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), b?.Copy(), borrows?.Copy())));
+                    var __qsVar1__indicator__ = MicrosoftQuantumArraysHead.Apply<Qubit>(__qsVar0__borrows__);
 #line hidden
-                MicrosoftQuantumPrimitiveCNOT.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (indicator, target)));
+                    UtilsMathBitSubtractor.Adjoint.Adjoint.Controlled.Apply((__controlQubits__, (a, b, __qsVar0__borrows__)));
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), b?.Copy(), borrows?.Copy())));
+                    MicrosoftQuantumIntrinsicCNOT.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar1__indicator__, target)));
 #line hidden
-                Release.Apply(borrows);
+                    UtilsMathBitSubtractor.Adjoint.Controlled.Apply((__controlQubits__, (a, b, __qsVar0__borrows__)));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(__qsVar0__borrows__);
+                }
             }
 
 #line hidden
@@ -891,31 +1071,31 @@ namespace Utils.Compare
         ;
         public override void Init()
         {
-            this.MicrosoftQuantumCanonHead = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Canon.Head<>));
+            this.MicrosoftQuantumArraysHead = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Arrays.Head<>));
             this.Length = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Core.Length<>));
-            this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Primitive.Allocate));
-            this.MicrosoftQuantumPrimitiveCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Primitive.CNOT));
-            this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Primitive.Release));
-            this.UtilsMathBitSubtractor = this.Factory.Get<IUnitary<(QArray<Qubit>,QArray<Qubit>,QArray<Qubit>)>>(typeof(Utils.Math.BitSubtractor));
+            this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Intrinsic.Allocate));
+            this.MicrosoftQuantumIntrinsicCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Intrinsic.CNOT));
+            this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Intrinsic.Release));
+            this.UtilsMathBitSubtractor = this.Factory.Get<IUnitary<(IQArray<Qubit>,IQArray<Qubit>,IQArray<Qubit>)>>(typeof(Utils.Math.BitSubtractor));
         }
 
-        public override IApplyData __dataIn((QArray<Qubit>,QArray<Qubit>,Qubit) data) => new In(data);
+        public override IApplyData __dataIn((IQArray<Qubit>,IQArray<Qubit>,Qubit) data) => new In(data);
         public override IApplyData __dataOut(QVoid data) => data;
-        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> a, QArray<Qubit> b, Qubit target)
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, IQArray<Qubit> a, IQArray<Qubit> b, Qubit target)
         {
-            return __m__.Run<XIfLessThan, (QArray<Qubit>,QArray<Qubit>,Qubit), QVoid>((a, b, target));
+            return __m__.Run<XIfLessThan, (IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid>((a, b, target));
         }
     }
 
-    public class XIfLessThanOrEqual : Unitary<(QArray<Qubit>,QArray<Qubit>,Qubit)>, ICallable
+    public partial class XIfLessThanOrEqual : Unitary<(IQArray<Qubit>,IQArray<Qubit>,Qubit)>, ICallable
     {
         public XIfLessThanOrEqual(IOperationFactory m) : base(m)
         {
         }
 
-        public class In : QTuple<(QArray<Qubit>,QArray<Qubit>,Qubit)>, IApplyData
+        public class In : QTuple<(IQArray<Qubit>,IQArray<Qubit>,Qubit)>, IApplyData
         {
-            public In((QArray<Qubit>,QArray<Qubit>,Qubit) data) : base(data)
+            public In((IQArray<Qubit>,IQArray<Qubit>,Qubit) data) : base(data)
             {
             }
 
@@ -924,19 +1104,19 @@ namespace Utils.Compare
 
         String ICallable.Name => "XIfLessThanOrEqual";
         String ICallable.FullName => "Utils.Compare.XIfLessThanOrEqual";
-        protected ICallable MicrosoftQuantumCanonHead
+        protected ICallable MicrosoftQuantumArraysHead
         {
             get;
             set;
         }
 
-        protected ICallable MicrosoftQuantumCanonMost
+        protected ICallable MicrosoftQuantumArraysMost
         {
             get;
             set;
         }
 
-        protected ICallable MicrosoftQuantumCanonTail
+        protected ICallable MicrosoftQuantumArraysTail
         {
             get;
             set;
@@ -960,7 +1140,7 @@ namespace Utils.Compare
             set;
         }
 
-        protected IUnitary<(QArray<Qubit>,Qubit)> XIfAllZero
+        protected IUnitary<(IQArray<Qubit>,Qubit)> XIfAllZero
         {
             get;
             set;
@@ -972,37 +1152,57 @@ namespace Utils.Compare
             set;
         }
 
-        protected IUnitary<(QArray<Qubit>,QArray<Qubit>,QArray<Qubit>)> UtilsMathBitSubtractor
+        protected IUnitary<(IQArray<Qubit>,IQArray<Qubit>,IQArray<Qubit>)> UtilsMathBitSubtractor
         {
             get;
             set;
         }
 
-        public override Func<(QArray<Qubit>,QArray<Qubit>,Qubit), QVoid> Body => (__in) =>
+        public override Func<(IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid> Body => (__in__) =>
         {
-            var (a,b,target) = __in;
+            var (a,b,target) = __in__;
 #line hidden
             {
-#line 106 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+#line 107 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
                 var qubits = Allocate.Apply((a.Length + 2L));
-#line 107 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                var borrows = MicrosoftQuantumCanonMost.Apply<QArray<Qubit>>(qubits);
-#line 108 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                var zeroTest = MicrosoftQuantumCanonTail.Apply<Qubit>(qubits);
-#line 109 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                UtilsMathBitSubtractor.Apply((a?.Copy(), b?.Copy(), borrows?.Copy()));
-#line 111 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                XIfAllZero.Apply((a?.Copy(), zeroTest));
-#line 113 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                var indicator = MicrosoftQuantumCanonHead.Apply<Qubit>(borrows);
-#line 114 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                UtilsGeneralQubitOr.Apply((indicator, zeroTest, target));
-#line 116 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                XIfAllZero.Apply((a?.Copy(), zeroTest));
-#line 118 "/Users/nicholaspapadopoulos/Box Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
-                UtilsMathBitSubtractor.Adjoint.Apply((a?.Copy(), b?.Copy(), borrows?.Copy()));
 #line hidden
-                Release.Apply(qubits);
+                Exception __arg1__ = null;
+                try
+                {
+#line 108 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    var borrows = (IQArray<Qubit>)MicrosoftQuantumArraysMost.Apply<IQArray<Qubit>>(qubits);
+#line 109 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    var zeroTest = MicrosoftQuantumArraysTail.Apply<Qubit>(qubits);
+#line 110 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    UtilsMathBitSubtractor.Apply((a, b, borrows));
+#line 112 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    XIfAllZero.Apply((a, zeroTest));
+#line 114 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    var indicator = MicrosoftQuantumArraysHead.Apply<Qubit>(borrows);
+#line 115 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    UtilsGeneralQubitOr.Apply((indicator, zeroTest, target));
+#line 117 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    XIfAllZero.Apply((a, zeroTest));
+#line 119 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Compare.qs"
+                    UtilsMathBitSubtractor.Adjoint.Apply((a, b, borrows));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(qubits);
+                }
             }
 
 #line hidden
@@ -1010,31 +1210,51 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,QArray<Qubit>,Qubit), QVoid> AdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid> AdjointBody => (__in__) =>
         {
-            var (a,b,target) = __in;
+            var (a,b,target) = __in__;
 #line hidden
             {
 #line hidden
-                var qubits = Allocate.Apply((a.Length + 2L));
+                var __qsVar0__qubits__ = Allocate.Apply((a.Length + 2L));
 #line hidden
-                var borrows = MicrosoftQuantumCanonMost.Apply<QArray<Qubit>>(qubits);
+                Exception __arg1__ = null;
+                try
+                {
 #line hidden
-                var zeroTest = MicrosoftQuantumCanonTail.Apply<Qubit>(qubits);
+                    var __qsVar1__borrows__ = (IQArray<Qubit>)MicrosoftQuantumArraysMost.Apply<IQArray<Qubit>>(__qsVar0__qubits__);
 #line hidden
-                var indicator = MicrosoftQuantumCanonHead.Apply<Qubit>(borrows);
+                    var __qsVar2__zeroTest__ = MicrosoftQuantumArraysTail.Apply<Qubit>(__qsVar0__qubits__);
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Adjoint.Apply((a?.Copy(), b?.Copy(), borrows?.Copy()));
+                    var __qsVar3__indicator__ = MicrosoftQuantumArraysHead.Apply<Qubit>(__qsVar1__borrows__);
 #line hidden
-                XIfAllZero.Adjoint.Apply((a?.Copy(), zeroTest));
+                    UtilsMathBitSubtractor.Adjoint.Adjoint.Apply((a, b, __qsVar1__borrows__));
 #line hidden
-                UtilsGeneralQubitOr.Adjoint.Apply((indicator, zeroTest, target));
+                    XIfAllZero.Adjoint.Apply((a, __qsVar2__zeroTest__));
 #line hidden
-                XIfAllZero.Adjoint.Apply((a?.Copy(), zeroTest));
+                    UtilsGeneralQubitOr.Adjoint.Apply((__qsVar3__indicator__, __qsVar2__zeroTest__, target));
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Apply((a?.Copy(), b?.Copy(), borrows?.Copy()));
+                    XIfAllZero.Adjoint.Apply((a, __qsVar2__zeroTest__));
 #line hidden
-                Release.Apply(qubits);
+                    UtilsMathBitSubtractor.Adjoint.Apply((a, b, __qsVar1__borrows__));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(__qsVar0__qubits__);
+                }
             }
 
 #line hidden
@@ -1042,31 +1262,51 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,QArray<Qubit>,Qubit)), QVoid> ControlledBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,Qubit)), QVoid> ControlledBody => (__in__) =>
         {
-            var (__controlQubits__,(a,b,target)) = __in;
+            var (__controlQubits__,(a,b,target)) = __in__;
 #line hidden
             {
 #line hidden
                 var qubits = Allocate.Apply((a.Length + 2L));
 #line hidden
-                var borrows = MicrosoftQuantumCanonMost.Apply<QArray<Qubit>>(qubits);
+                Exception __arg1__ = null;
+                try
+                {
 #line hidden
-                var zeroTest = MicrosoftQuantumCanonTail.Apply<Qubit>(qubits);
+                    var borrows = (IQArray<Qubit>)MicrosoftQuantumArraysMost.Apply<IQArray<Qubit>>(qubits);
 #line hidden
-                UtilsMathBitSubtractor.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), b?.Copy(), borrows?.Copy())));
+                    var zeroTest = MicrosoftQuantumArraysTail.Apply<Qubit>(qubits);
 #line hidden
-                XIfAllZero.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), zeroTest)));
+                    UtilsMathBitSubtractor.Controlled.Apply((__controlQubits__, (a, b, borrows)));
 #line hidden
-                var indicator = MicrosoftQuantumCanonHead.Apply<Qubit>(borrows);
+                    XIfAllZero.Controlled.Apply((__controlQubits__, (a, zeroTest)));
 #line hidden
-                UtilsGeneralQubitOr.Controlled.Apply((__controlQubits__?.Copy(), (indicator, zeroTest, target)));
+                    var indicator = MicrosoftQuantumArraysHead.Apply<Qubit>(borrows);
 #line hidden
-                XIfAllZero.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), zeroTest)));
+                    UtilsGeneralQubitOr.Controlled.Apply((__controlQubits__, (indicator, zeroTest, target)));
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), b?.Copy(), borrows?.Copy())));
+                    XIfAllZero.Controlled.Apply((__controlQubits__, (a, zeroTest)));
 #line hidden
-                Release.Apply(qubits);
+                    UtilsMathBitSubtractor.Adjoint.Controlled.Apply((__controlQubits__, (a, b, borrows)));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(qubits);
+                }
             }
 
 #line hidden
@@ -1074,31 +1314,51 @@ namespace Utils.Compare
         }
 
         ;
-        public override Func<(QArray<Qubit>,(QArray<Qubit>,QArray<Qubit>,Qubit)), QVoid> ControlledAdjointBody => (__in) =>
+        public override Func<(IQArray<Qubit>,(IQArray<Qubit>,IQArray<Qubit>,Qubit)), QVoid> ControlledAdjointBody => (__in__) =>
         {
-            var (__controlQubits__,(a,b,target)) = __in;
+            var (__controlQubits__,(a,b,target)) = __in__;
 #line hidden
             {
 #line hidden
-                var qubits = Allocate.Apply((a.Length + 2L));
+                var __qsVar0__qubits__ = Allocate.Apply((a.Length + 2L));
 #line hidden
-                var borrows = MicrosoftQuantumCanonMost.Apply<QArray<Qubit>>(qubits);
+                Exception __arg1__ = null;
+                try
+                {
 #line hidden
-                var zeroTest = MicrosoftQuantumCanonTail.Apply<Qubit>(qubits);
+                    var __qsVar1__borrows__ = (IQArray<Qubit>)MicrosoftQuantumArraysMost.Apply<IQArray<Qubit>>(__qsVar0__qubits__);
 #line hidden
-                var indicator = MicrosoftQuantumCanonHead.Apply<Qubit>(borrows);
+                    var __qsVar2__zeroTest__ = MicrosoftQuantumArraysTail.Apply<Qubit>(__qsVar0__qubits__);
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), b?.Copy(), borrows?.Copy())));
+                    var __qsVar3__indicator__ = MicrosoftQuantumArraysHead.Apply<Qubit>(__qsVar1__borrows__);
 #line hidden
-                XIfAllZero.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), zeroTest)));
+                    UtilsMathBitSubtractor.Adjoint.Adjoint.Controlled.Apply((__controlQubits__, (a, b, __qsVar1__borrows__)));
 #line hidden
-                UtilsGeneralQubitOr.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (indicator, zeroTest, target)));
+                    XIfAllZero.Adjoint.Controlled.Apply((__controlQubits__, (a, __qsVar2__zeroTest__)));
 #line hidden
-                XIfAllZero.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), zeroTest)));
+                    UtilsGeneralQubitOr.Adjoint.Controlled.Apply((__controlQubits__, (__qsVar3__indicator__, __qsVar2__zeroTest__, target)));
 #line hidden
-                UtilsMathBitSubtractor.Adjoint.Controlled.Apply((__controlQubits__?.Copy(), (a?.Copy(), b?.Copy(), borrows?.Copy())));
+                    XIfAllZero.Adjoint.Controlled.Apply((__controlQubits__, (a, __qsVar2__zeroTest__)));
 #line hidden
-                Release.Apply(qubits);
+                    UtilsMathBitSubtractor.Adjoint.Controlled.Apply((__controlQubits__, (a, b, __qsVar1__borrows__)));
+                }
+#line hidden
+                catch (Exception __arg2__)
+                {
+                    __arg1__ = __arg2__;
+                    throw __arg1__;
+                }
+#line hidden
+                finally
+                {
+                    if (__arg1__ != null)
+                    {
+                        throw __arg1__;
+                    }
+
+#line hidden
+                    Release.Apply(__qsVar0__qubits__);
+                }
             }
 
 #line hidden
@@ -1108,22 +1368,22 @@ namespace Utils.Compare
         ;
         public override void Init()
         {
-            this.MicrosoftQuantumCanonHead = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Canon.Head<>));
-            this.MicrosoftQuantumCanonMost = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Canon.Most<>));
-            this.MicrosoftQuantumCanonTail = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Canon.Tail<>));
+            this.MicrosoftQuantumArraysHead = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Arrays.Head<>));
+            this.MicrosoftQuantumArraysMost = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Arrays.Most<>));
+            this.MicrosoftQuantumArraysTail = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Arrays.Tail<>));
             this.Length = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Core.Length<>));
-            this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Primitive.Allocate));
-            this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Primitive.Release));
-            this.XIfAllZero = this.Factory.Get<IUnitary<(QArray<Qubit>,Qubit)>>(typeof(XIfAllZero));
+            this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Intrinsic.Allocate));
+            this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Intrinsic.Release));
+            this.XIfAllZero = this.Factory.Get<IUnitary<(IQArray<Qubit>,Qubit)>>(typeof(XIfAllZero));
             this.UtilsGeneralQubitOr = this.Factory.Get<IUnitary<(Qubit,Qubit,Qubit)>>(typeof(Utils.General.QubitOr));
-            this.UtilsMathBitSubtractor = this.Factory.Get<IUnitary<(QArray<Qubit>,QArray<Qubit>,QArray<Qubit>)>>(typeof(Utils.Math.BitSubtractor));
+            this.UtilsMathBitSubtractor = this.Factory.Get<IUnitary<(IQArray<Qubit>,IQArray<Qubit>,IQArray<Qubit>)>>(typeof(Utils.Math.BitSubtractor));
         }
 
-        public override IApplyData __dataIn((QArray<Qubit>,QArray<Qubit>,Qubit) data) => new In(data);
+        public override IApplyData __dataIn((IQArray<Qubit>,IQArray<Qubit>,Qubit) data) => new In(data);
         public override IApplyData __dataOut(QVoid data) => data;
-        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> a, QArray<Qubit> b, Qubit target)
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, IQArray<Qubit> a, IQArray<Qubit> b, Qubit target)
         {
-            return __m__.Run<XIfLessThanOrEqual, (QArray<Qubit>,QArray<Qubit>,Qubit), QVoid>((a, b, target));
+            return __m__.Run<XIfLessThanOrEqual, (IQArray<Qubit>,IQArray<Qubit>,Qubit), QVoid>((a, b, target));
         }
     }
 }

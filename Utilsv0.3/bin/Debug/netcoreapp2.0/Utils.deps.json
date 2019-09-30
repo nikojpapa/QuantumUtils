@@ -1,56 +1,49 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "e5d92f323dda8e8a18c1acb4c4c44b49a5925f0c"
+    "signature": "6e22a76501582488e0c48852900208ef463b2ce3"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Utils/0.3.2": {
+      "Utils/0.9.0": {
         "dependencies": {
-          "Microsoft.Quantum.Canon": "0.3.1810.2508-preview",
-          "Microsoft.Quantum.Development.Kit": "0.3.1810.2508-preview"
+          "Microsoft.Quantum.Development.Kit": "0.9.1909.3002",
+          "Microsoft.Quantum.Standard": "0.9.1909.3002"
         },
         "runtime": {
           "Utils.dll": {}
         }
       },
-      "Microsoft.Quantum.Canon/0.3.1810.2508-preview": {
+      "Microsoft.Quantum.Development.Kit/0.9.1909.3002": {
         "dependencies": {
-          "Microsoft.Quantum.Development.Kit": "0.3.1810.2508-preview"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Quantum.Canon.dll": {
-            "assemblyVersion": "0.3.1810.2508",
-            "fileVersion": "0.3.1810.2508"
-          }
+          "Microsoft.Quantum.Simulators": "0.9.1909.3002"
         }
       },
-      "Microsoft.Quantum.Development.Kit/0.3.1810.2508-preview": {
+      "Microsoft.Quantum.Simulators/0.9.1909.3002": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Quantum.Primitives.dll": {
-            "assemblyVersion": "0.3.1810.2508",
-            "fileVersion": "0.0.0.0"
-          },
-          "lib/netstandard2.0/Microsoft.Quantum.QsCompilerCommon.dll": {
-            "assemblyVersion": "0.3.1810.2508",
-            "fileVersion": "0.0.0.0"
+          "lib/netstandard2.0/Microsoft.Quantum.Intrinsic.dll": {
+            "assemblyVersion": "0.9.1909.3002",
+            "fileVersion": "0.9.1909.3002"
           },
           "lib/netstandard2.0/Microsoft.Quantum.Simulation.Common.dll": {
-            "assemblyVersion": "0.3.1810.2508",
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "0.9.1909.3002",
+            "fileVersion": "0.9.1909.3002"
           },
           "lib/netstandard2.0/Microsoft.Quantum.Simulation.Core.dll": {
-            "assemblyVersion": "0.3.1810.2508",
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "0.9.1909.3002",
+            "fileVersion": "0.9.1909.3002"
           },
           "lib/netstandard2.0/Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll": {
-            "assemblyVersion": "0.3.1810.2508",
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "0.9.1909.3002",
+            "fileVersion": "0.9.1909.3002"
           },
-          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Simulators.dll": {
-            "assemblyVersion": "0.3.1810.2508",
-            "fileVersion": "0.0.0.0"
+          "lib/netstandard2.0/Microsoft.Quantum.Simulators.dll": {
+            "assemblyVersion": "0.9.1909.3002",
+            "fileVersion": "0.9.1909.3002"
           }
         },
         "runtimeTargets": {
@@ -75,28 +68,61 @@
             "fileVersion": "0.0.0.0"
           }
         }
+      },
+      "Microsoft.Quantum.Standard/0.9.1909.3002": {
+        "dependencies": {
+          "Microsoft.Quantum.Development.Kit": "0.9.1909.3002"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Quantum.Standard.dll": {
+            "assemblyVersion": "0.9.1909.3002",
+            "fileVersion": "0.9.1909.3002"
+          }
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.21924"
+          }
+        }
       }
     }
   },
   "libraries": {
-    "Utils/0.3.2": {
+    "Utils/0.9.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Quantum.Canon/0.3.1810.2508-preview": {
+    "Microsoft.Quantum.Development.Kit/0.9.1909.3002": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6Wgj62a+vVBBFeng0u2mZmVBLKpVjRJ74Vc+RZbXlJwf5lFpBFn957ivg0urKmKfNkthOHJcUbpjthL5oZK3AQ==",
-      "path": "microsoft.quantum.canon/0.3.1810.2508-preview",
-      "hashPath": "microsoft.quantum.canon.0.3.1810.2508-preview.nupkg.sha512"
+      "sha512": "sha512-dLbwtgJYlvTvJnkTGQMnu3gDl+SFc/3T686GomWowC64ID7ntL1tmwxt46OXLfX5ttf2P9tW/w35C8cEvrkH1w==",
+      "path": "microsoft.quantum.development.kit/0.9.1909.3002",
+      "hashPath": "microsoft.quantum.development.kit.0.9.1909.3002.nupkg.sha512"
     },
-    "Microsoft.Quantum.Development.Kit/0.3.1810.2508-preview": {
+    "Microsoft.Quantum.Simulators/0.9.1909.3002": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1rTOns1SjndI+RXs//MjoVAe53UqrsIi6jA3ilhcV2VTqJSe9V0zP6V9wibvmLqzm8r3aaGK+p6mTHYqicL8+Q==",
-      "path": "microsoft.quantum.development.kit/0.3.1810.2508-preview",
-      "hashPath": "microsoft.quantum.development.kit.0.3.1810.2508-preview.nupkg.sha512"
+      "sha512": "sha512-zQ7Kd/RsjXhxROpLsjhtw//R2EE6wylJd03dYlnTQxp0XwUMelcbsMTWVWtFl0rHweBpphwJ5VIp/zJl3AUnqg==",
+      "path": "microsoft.quantum.simulators/0.9.1909.3002",
+      "hashPath": "microsoft.quantum.simulators.0.9.1909.3002.nupkg.sha512"
+    },
+    "Microsoft.Quantum.Standard/0.9.1909.3002": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oexWVX+7OHMBwOcFqmyFHkhoSz9H01k3QlHkeCYKiRJzxFY+iN5H4DWhoNkLkozbX2aztWON2/hPrcBjYVb5Vg==",
+      "path": "microsoft.quantum.standard/0.9.1909.3002",
+      "hashPath": "microsoft.quantum.standard.0.9.1909.3002.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     }
   }
 }

@@ -1,6 +1,7 @@
 namespace Utils.Compare {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Arrays;
     open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Intrinsic;
     open Utils.General;
     open Utils.Math;
     open Utils.Testing;

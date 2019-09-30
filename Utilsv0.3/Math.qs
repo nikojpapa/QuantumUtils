@@ -1,7 +1,8 @@
 namespace Utils.Math {
     open Microsoft.Quantum.Extensions.Math;
+    open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Canon;
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
 
     function CeilLogBase2(x: Double): Int {
         return Ceiling( Log(x) / Log(2.0) );

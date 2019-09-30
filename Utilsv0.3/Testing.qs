@@ -1,6 +1,7 @@
 namespace Utils.Testing {
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Intrinsic;
     open Utils.General;
     
     
@@ -29,18 +30,18 @@ namespace Utils.Testing {
         mutable newBinary = new Int[binaryLength];
         
         for (base10 in 0 .. binaryLength - 1) {
-            set newBinary[base10] = lastBinary[base10];
+            set newBinary w/= base10 <- lastBinary[base10];
         }
         
         let binariesFromZero = _GenerateBinaries(allBinaries, depth + 1);
-        set newBinary[depth] = 1;
+        set newBinary w/= depth <- 1;
         mutable newAllBinaries2 = new Int[][Length(binariesFromZero) + 1];
         
         for (base10 in 0 .. Length(binariesFromZero) - 1) {
-            set newAllBinaries2[base10] = binariesFromZero[base10];
+            set newAllBinaries2 w/= base10 <- binariesFromZero[base10];
         }
         
-        set newAllBinaries2[Length(binariesFromZero)] = newBinary;
+        set newAllBinaries2 w/= Length(binariesFromZero) <- newBinary;
         let binariesFromOne = _GenerateBinaries(newAllBinaries2, depth + 1);
         return binariesFromOne;
     }
@@ -49,7 +50,7 @@ namespace Utils.Testing {
     function GenerateAllBinariesOfLength (length : Int) : Int[][] {
         
         mutable initialBinaries = new Int[][1];
-        set initialBinaries[0] = new Int[length];
+        set initialBinaries w/= 0 <- new Int[length];
         return _GenerateBinaries(initialBinaries, 0);
     }
     

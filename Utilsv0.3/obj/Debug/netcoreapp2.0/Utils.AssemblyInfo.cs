@@ -9,8 +9,8 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nicholas Papadopoulos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("0.3.2.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.3.2")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.9.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.9.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Utils")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Utils")]
-[assembly: System.Reflection.AssemblyVersionAttribute("0.3.2.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.9.0.0")]

@@ -3,7 +3,7 @@ namespace Utils.General {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Extensions.Convert;
     open Microsoft.Quantum.Extensions.Testing;
-    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Intrinsic;
 
 
     function ConcatArrays<'T> (arrays: 'T[][]): 'T[] {
@@ -66,7 +66,7 @@ namespace Utils.General {
     operation _InitQubit (index : Int, binaryRep : Int[], target : Qubit) : Unit {
         
         body (...) {
-            ApplyIfCA(X, index <= Length(binaryRep) - 1 && binaryRep[index] == 1, target);
+            ApplyIfCA(X, index <= Length(binaryRep) - 1 and binaryRep[index] == 1, target);
         }
         
         adjoint invert;
@@ -100,13 +100,17 @@ namespace Utils.General {
         mutable base10Mut = base10;
         mutable binary = new Int[0];
         
-        repeat {
+        while(base10Mut > 0) {
             set binary = [base10Mut % 2] + binary;
             set base10Mut = base10Mut / 2;
         }
-        until (base10Mut <= 0)
-        fixup {
-        }
+        // repeat {
+        //     set binary = [base10Mut % 2] + binary;
+        //     set base10Mut = base10Mut / 2;
+        // }
+        // until (base10Mut <= 0)
+        // fixup {
+        // }
         
         return binary;
     }
