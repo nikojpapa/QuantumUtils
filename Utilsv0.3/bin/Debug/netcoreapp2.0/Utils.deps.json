@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Utils/0.9.0": {
+      "Utils/0.9.01": {
         "dependencies": {
           "Microsoft.Quantum.Development.Kit": "0.9.1909.3002",
           "Microsoft.Quantum.Standard": "0.9.1909.3002"
@@ -91,7 +91,7 @@
     }
   },
   "libraries": {
-    "Utils/0.9.0": {
+    "Utils/0.9.01": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

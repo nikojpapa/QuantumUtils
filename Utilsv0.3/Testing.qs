@@ -59,7 +59,7 @@ namespace Utils.Testing {
 
         using (qubits = Qubit[length]) {
             for (base10 in 0..2 ^ length - 1) {
-                IntegerIncrementLE(base10, LittleEndian(qubits));
+                IncrementByInteger(base10, LittleEndian(qubits));
                 SwapReverseRegister(qubits);
                 op(qubits);
                 ResetAll(qubits);

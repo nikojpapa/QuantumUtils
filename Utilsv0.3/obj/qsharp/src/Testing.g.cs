@@ -253,13 +253,13 @@ namespace Utils.Testing
 
         String ICallable.Name => "RunOnAllBinariesOfLength";
         String ICallable.FullName => "Utils.Testing.RunOnAllBinariesOfLength";
-        protected ICallable<IQArray<Qubit>, Microsoft.Quantum.Arithmetic.LittleEndian> MicrosoftQuantumArithmeticLittleEndian
+        protected IUnitary<(Int64,Microsoft.Quantum.Arithmetic.LittleEndian)> MicrosoftQuantumArithmeticIncrementByInteger
         {
             get;
             set;
         }
 
-        protected IUnitary<(Int64,Microsoft.Quantum.Arithmetic.LittleEndian)> MicrosoftQuantumCanonIntegerIncrementLE
+        protected ICallable<IQArray<Qubit>, Microsoft.Quantum.Arithmetic.LittleEndian> MicrosoftQuantumArithmeticLittleEndian
         {
             get;
             set;
@@ -305,7 +305,7 @@ namespace Utils.Testing
 #line hidden
                     {
 #line 62 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Testing.qs"
-                        MicrosoftQuantumCanonIntegerIncrementLE.Apply((base10, new Microsoft.Quantum.Arithmetic.LittleEndian(qubits)));
+                        MicrosoftQuantumArithmeticIncrementByInteger.Apply((base10, new Microsoft.Quantum.Arithmetic.LittleEndian(qubits)));
 #line 63 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Testing.qs"
                         MicrosoftQuantumCanonSwapReverseRegister.Apply(qubits);
 #line 64 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Testing.qs"
@@ -340,8 +340,8 @@ namespace Utils.Testing
         ;
         public override void Init()
         {
+            this.MicrosoftQuantumArithmeticIncrementByInteger = this.Factory.Get<IUnitary<(Int64,Microsoft.Quantum.Arithmetic.LittleEndian)>>(typeof(Microsoft.Quantum.Arithmetic.IncrementByInteger));
             this.MicrosoftQuantumArithmeticLittleEndian = this.Factory.Get<ICallable<IQArray<Qubit>, Microsoft.Quantum.Arithmetic.LittleEndian>>(typeof(Microsoft.Quantum.Arithmetic.LittleEndian));
-            this.MicrosoftQuantumCanonIntegerIncrementLE = this.Factory.Get<IUnitary<(Int64,Microsoft.Quantum.Arithmetic.LittleEndian)>>(typeof(Microsoft.Quantum.Canon.IntegerIncrementLE));
             this.MicrosoftQuantumCanonSwapReverseRegister = this.Factory.Get<IUnitary<IQArray<Qubit>>>(typeof(Microsoft.Quantum.Canon.SwapReverseRegister));
             this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Intrinsic.Allocate));
             this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Intrinsic.Release));

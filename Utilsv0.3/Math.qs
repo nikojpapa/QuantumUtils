@@ -1,5 +1,5 @@
 namespace Utils.Math {
-    open Microsoft.Quantum.Extensions.Math;
+    open Microsoft.Quantum.Math;
     open Microsoft.Quantum.Arithmetic;
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;

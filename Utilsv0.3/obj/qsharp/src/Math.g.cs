@@ -44,13 +44,13 @@ namespace Utils.Math
 
         String ICallable.Name => "CeilLogBase2";
         String ICallable.FullName => "Utils.Math.CeilLogBase2";
-        protected ICallable<Double, Int64> MicrosoftQuantumExtensionsMathCeiling
+        protected ICallable<Double, Int64> MicrosoftQuantumMathCeiling
         {
             get;
             set;
         }
 
-        protected ICallable<Double, Double> MicrosoftQuantumExtensionsMathLog
+        protected ICallable<Double, Double> MicrosoftQuantumMathLog
         {
             get;
             set;
@@ -60,14 +60,14 @@ namespace Utils.Math
         {
             var x = __in__;
 #line 8 "/Users/nicholaspapadopoulos/Box%20Sync/CS/Me/quantum/Utils/Utilsv0.3/Math.qs"
-            return MicrosoftQuantumExtensionsMathCeiling.Apply((MicrosoftQuantumExtensionsMathLog.Apply(x) / MicrosoftQuantumExtensionsMathLog.Apply(2D)));
+            return MicrosoftQuantumMathCeiling.Apply((MicrosoftQuantumMathLog.Apply(x) / MicrosoftQuantumMathLog.Apply(2D)));
         }
 
         ;
         public override void Init()
         {
-            this.MicrosoftQuantumExtensionsMathCeiling = this.Factory.Get<ICallable<Double, Int64>>(typeof(Microsoft.Quantum.Extensions.Math.Ceiling));
-            this.MicrosoftQuantumExtensionsMathLog = this.Factory.Get<ICallable<Double, Double>>(typeof(Microsoft.Quantum.Extensions.Math.Log));
+            this.MicrosoftQuantumMathCeiling = this.Factory.Get<ICallable<Double, Int64>>(typeof(Microsoft.Quantum.Math.Ceiling));
+            this.MicrosoftQuantumMathLog = this.Factory.Get<ICallable<Double, Double>>(typeof(Microsoft.Quantum.Math.Log));
         }
 
         public override IApplyData __dataIn(Double data) => new QTuple<Double>(data);
